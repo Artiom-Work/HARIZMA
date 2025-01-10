@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after,
+ul,
+p {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	font-weight: unset;
+}
+
+a {
+	text-decoration: none;
+}
+
+img,
+label {
+	caret-color: transparent;
+}
+
+li {
+	list-style: none;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}

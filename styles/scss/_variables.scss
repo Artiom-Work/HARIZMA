@@ -1,0 +1,36 @@
+// colors
+$color-light: #fff;
+$color-medium: #606571;
+$color-accent: #f69020;
+
+$dark-bg: #131517;
+$main-bg: #191b20;
+
+$bg-cards-dark: #202124;
+$bg-cards-dark-secondary: #282b32;
+$bg-cards-dark-secondary-hover: #343740;
+
+$btn-text-color-dark: #252121;
+$accent-btn-bg-main: linear-gradient(
+  141deg,
+  #ea422a 0%,
+  #f69020 47.92%,
+  #ffc619 100%
+);
+$accent-btn-bg-secondary: linear-gradient(
+  217deg,
+  #ffc619 0%,
+  #f69020 46.35%,
+  #ec5128 100%
+);
+
+// fonts
+$main-font-regular: "muller-regular";
+$main-font-medium: "muller-medium";
+$main-font-bold: "muller-bold";
+$main-font-extra-bold: "muller-extra-bold";
+$main-font-black: "muller-black";
+// properties
+// $border: 1px solid blue;
+// paths
+$image-path: "../../images";

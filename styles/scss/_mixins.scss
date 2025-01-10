@@ -1,0 +1,39 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexCenterSpaceBetwen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin active-mobile {
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+@mixin active {
+  &:active {
+    @content;
+  }
+}
+@mixin button($_ff, $_fs, $_lh, $_color, $_bg, $_pad, $_br) {
+  font-family: $_ff;
+  font-size: $_fs;
+  line-height: $_lh;
+  color: $_color;
+  background: $_bg;
+  padding: $_pad;
+  border-radius: $_br;
+}
