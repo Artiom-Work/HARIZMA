@@ -21,6 +21,7 @@ h6 {
 
 a {
 	text-decoration: none;
+	color: inherit;
 }
 
 img,

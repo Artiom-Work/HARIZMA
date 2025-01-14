@@ -1,0 +1,17 @@
+.logo {
+  &__link {
+    transition: all 0.4s ease 0s;
+    display: inline-block;
+    height: inherit;
+    @include hover {
+      filter: brightness(60%);
+    }
+    @include active {
+      filter: brightness(120%);
+      transform: scale(0.95);
+    }
+  }
+  &__image {
+    height: inherit;
+  }
+}

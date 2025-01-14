@@ -3,12 +3,33 @@ $color-light: #fff;
 $color-medium: #606571;
 $color-accent: #f69020;
 
+$color-border: #393c43;
+
 $dark-bg: #131517;
 $main-bg: #191b20;
 
+$bg-icons-light: rgba(255, 255, 255, 0.07);
 $bg-cards-dark: #202124;
 $bg-cards-dark-secondary: #282b32;
 $bg-cards-dark-secondary-hover: #343740;
+
+$bg-center-lines: linear-gradient(
+  90deg,
+  transparent 0%,
+  transparent 11.5%,
+  #313339 1px,
+  transparent 11.6%,
+  transparent 36.2%,
+  #313339 1px,
+  transparent 36.35%,
+  transparent 64.01%,
+  #313339 1px,
+  transparent 64.15%,
+  transparent 91.7%,
+  #313339 1px,
+  transparent 91.82%,
+  transparent 100%
+);
 
 $btn-text-color-dark: #252121;
 $accent-btn-bg-main: linear-gradient(

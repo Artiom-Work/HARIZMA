@@ -1,0 +1,136 @@
+.nav {
+  white-space: nowrap;
+  text-transform: uppercase;
+  &__link {
+    color: $color-light;
+    transition: all 0.4s ease 0s;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    @include hover {
+      opacity: 0.6;
+      .nav__link-image-wrapper {
+        background: $color-accent;
+        transition: all 0.4s ease 0s;
+      }
+    }
+    @include active {
+      opacity: 0.3;
+    }
+    &--desc {
+      @media (max-width: 1100px) {
+        display: none;
+      }
+    }
+    &--map {
+      position: relative;
+      left: -62px;
+      @media (max-width: 1500px) {
+        left: unset;
+      }
+    }
+    &-image-wrapper {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: $bg-icons-light;
+      @include flexCenter;
+      &--mobile {
+        @media (max-width: 768px) {
+          width: 51px;
+          height: 51px;
+        }
+      }
+    }
+    &-image {
+      fill: $color-medium;
+      &--tel {
+        width: 26.15px;
+        height: 26.67px;
+      }
+      &--map {
+        width: 21.04px;
+        height: 25.56px;
+      }
+    }
+    &-text {
+      position: relative;
+      top: 3px;
+      font-size: 15px;
+      line-height: 100%;
+      letter-spacing: 0.03em;
+      @media (max-width: 1280px) {
+        font-size: 14px;
+        top: unset;
+      }
+      @media (max-width: 768px) {
+        font-size: 14px;
+        top: 2px;
+      }
+      &--color {
+        text-transform: none;
+        color: $color-accent;
+      }
+      &--desc {
+        @media (max-width: 900px) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__buttons-wrapper {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    &--desc {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+    &--mobile {
+      margin: 19px 0 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 19px;
+    }
+  }
+  &__btn {
+    transition: all 0.4s ease 0s;
+    @include button(
+      $main-font-bold,
+      13px,
+      100%,
+      $color-light,
+      transparent,
+      26px 56px 21px,
+      40px
+    );
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    outline: 1px solid $color-border;
+    @media (max-width: 768px) {
+      padding: 20px 57px 16px;
+    }
+    @include hover {
+      color: #000;
+      background: $color-accent;
+      transform: scale(1.05);
+    }
+    @include active {
+      transform: scale(0.95);
+    }
+    &--bg-color {
+      background: $color-light;
+      color: #000;
+      padding: 26px 39px 21px;
+      @media (max-width: 768px) {
+        padding: 22px 39px 16px;
+      }
+      @include hover {
+        color: $color-light;
+      }
+    }
+  }
+}

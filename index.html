@@ -10,10 +10,80 @@
 </head>
 
 <body>
-	<div class="center">
+	<header class="header">
+		<div class="center">
 
-	</div>
+			<div class="logo header__logo">
+				<a class="logo__link" href="index.html">
+					<img class="logo__image" src="./images/icons/logo.svg" alt="Логотип караоке бара">
+				</a>
+			</div>
 
+			<nav class="header__nav nav">
+				<a class="nav__link nav__link--desc" href="tel:380979709090" target="_blank">
+					<div class="nav__link-image-wrapper">
+						<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
+							<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
+						</svg>
+					</div>
+					<span class="nav__link-text">+38 (097) 970-90-90</span>
+				</a>
+
+				<a class="nav__link nav__link--map" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank">
+					<div class="nav__link-image-wrapper nav__link-image-wrapper--mobile">
+						<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
+							<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
+						</svg>
+					</div>
+					<span class="nav__link-text nav__link-text--color nav__link-text--desc">м.
+						Лубянка</span>
+				</a>
+
+				<div class="nav__buttons-wrapper nav__buttons-wrapper--desc">
+					<a class="nav__btn" href="#!">Наши залы</a>
+					<a class="nav__btn nav__btn--bg-color" href="#!">Забронировать</a>
+				</div>
+			</nav>
+
+			<div class="mobile-menu">
+				<input id="menu-switch" type="checkbox">
+				<label class="mobile-menu__burger" for="menu-switch">
+					<span class="mobile-menu__burger-layer"></span>
+					<span class="mobile-menu__burger-layer mobile-menu__burger-layer--bottom"></span>
+				</label>
+				<div class="mobile-menu__wrapper">
+					<div class="mobile-menu__box">
+						<nav class="mobile-menu__nav nav">
+							<a class="nav__link nav__link--map" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank">
+								<div class="nav__link-image-wrapper">
+									<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
+										<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
+									</svg>
+								</div>
+								<span class="nav__link-text nav__link-text--color">м.
+									Лубянка</span>
+							</a>
+
+							<a class="nav__link" href="tel:380979709090" target="_blank">
+								<div class="nav__link-image-wrapper">
+									<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
+										<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
+									</svg>
+								</div>
+								<span class="nav__link-text">+38 (097) 970-90-90</span>
+							</a>
+
+							<div class="nav__buttons-wrapper nav__buttons-wrapper--mobile">
+								<a class="nav__btn" href="#!">Наши залы</a>
+								<a class="nav__btn nav__btn--bg-color" href="#!">Забронировать</a>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
 
 	<script type="module" src="js/main.js"></script>
 </body>

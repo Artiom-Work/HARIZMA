@@ -1,0 +1,58 @@
+.header {
+  min-height: 139px;
+  background: $main-bg;
+  border-bottom: 1px dashed #313339;
+  @media (max-width: 768px) {
+    border-bottom: none;
+    min-height: 79px;
+  }
+  .center {
+    padding: 40px 70px 28px 59px;
+    @include flexCenterSpaceBetwen;
+    gap: 30px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 36.2%,
+      #313339 1px,
+      transparent 36.35%,
+      transparent 100%
+    );
+    @media (max-width: 1875px) {
+      background: transparent;
+    }
+    @media (max-width: 1400px) {
+      padding: 40px 22px 28px 12px;
+    }
+    @media (max-width: 1280px) {
+      padding: 28px 22px 28px 12px;
+    }
+    @media (max-width: 768px) {
+      padding: 18px 29px 9px 12px;
+    }
+  }
+  &__logo {
+    width: 293px;
+    height: 67px;
+    z-index: 3;
+    @media (max-width: 1280px) {
+      width: 161px;
+      height: 37px;
+    }
+  }
+  &__nav {
+    max-width: 1119px;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 1100px) {
+      justify-content: flex-end;
+    }
+    @media (max-width: 768px) {
+      min-height: 51px;
+    }
+  }
+}
