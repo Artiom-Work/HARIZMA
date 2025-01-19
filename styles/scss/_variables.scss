@@ -19,15 +19,26 @@ $bg-center-lines: linear-gradient(
   transparent 11.5%,
   #313339 1px,
   transparent 11.6%,
-  transparent 36.2%,
+  transparent 37.2%,
   #313339 1px,
-  transparent 36.35%,
-  transparent 64.01%,
+  transparent 37.35%,
+  transparent 63.01%,
   #313339 1px,
-  transparent 64.15%,
-  transparent 91.7%,
+  transparent 63.15%,
+  transparent 88.7%,
   #313339 1px,
-  transparent 91.82%,
+  transparent 88.82%,
+  transparent 100%
+);
+$bg-center-lines-mobile: linear-gradient(
+  90deg,
+  transparent 0%,
+  transparent 18.5%,
+  #313339 1px,
+  transparent 18.8%,
+  transparent 83.7%,
+  #313339 1px,
+  transparent 83.82%,
   transparent 100%
 );
 
@@ -44,6 +55,7 @@ $accent-btn-bg-secondary: linear-gradient(
   #f69020 46.35%,
   #ec5128 100%
 );
+$round-btn-icon-bg: #2e3441;
 
 // fonts
 $main-font-regular: "muller-regular";

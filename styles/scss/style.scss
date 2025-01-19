@@ -18,6 +18,9 @@ body {
   color: $color-light;
   background: $main-bg;
 }
+.main {
+  min-height: 50vh;
+}
 .lock-body {
   overflow: hidden;
 }
@@ -32,9 +35,9 @@ body {
   // 	transparent 11.5%,
   // 	#313339 1px,
   // 	transparent 11.6%,
-  // 	transparent 36.2%,
+  // 	transparent 37.2%,
   // 	#313339 1px,
-  // 	transparent 36.35%,
+  // 	transparent 37.35%,
   // 	transparent 64.01%,
   // 	#313339 1px,
   // 	transparent 64.15%,

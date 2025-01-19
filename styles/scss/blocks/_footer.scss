@@ -1,0 +1,203 @@
+.footer {
+  background: $dark-bg;
+  .center {
+    position: relative;
+    padding: 91px 50px 90px 62px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 251px;
+    background: $bg-center-lines;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 25.4%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(96, 101, 113, 0) 0%,
+        rgba(96, 101, 113, 0.05) 100%
+      );
+      top: 0;
+      left: 11.7%;
+    }
+    @media (max-width: 1400px) {
+      padding: 42px 23px 42px 11px;
+    }
+    @media (max-width: 768px) {
+      padding: 42px 23px 42px 20px;
+      background: $bg-center-lines-mobile;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__logo {
+    max-width: 293px;
+    height: 67px;
+    @media (max-width: 1280px) {
+      max-width: 161px;
+      height: 37px;
+    }
+  }
+  &__nav {
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 71px;
+      @media (max-width: 1900px) {
+        width: 100%;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: start;
+      }
+      @media (max-width: 768px) {
+        gap: unset;
+        & li:nth-child(4) {
+          order: -1;
+          margin: 0 0 13px 0;
+        }
+        & li:nth-child(1) {
+          order: -1;
+        }
+      }
+    }
+    &-item {
+      &--logo {
+        @media (max-width: 768px) {
+          margin: 0 0 29px -8px;
+        }
+      }
+      &--link {
+        @media (max-width: 1900px) {
+          order: 1;
+        }
+        @media (max-width: 1280px) {
+          margin-left: 300px;
+        }
+        @media (max-width: 1000px) {
+          margin-left: 200px;
+        }
+        @media (max-width: 768px) {
+          order: 0;
+          margin-left: unset;
+        }
+      }
+      &--display {
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+      &--button {
+        max-width: 950px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        @media (max-width: 1630px) {
+          max-width: 690px;
+        }
+        @media (max-width: 1362px) {
+          max-width: 500px;
+        }
+        @media (max-width: 910px) {
+          max-width: 350px;
+        }
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+      &--buttons-group {
+        display: none;
+        @media (max-width: 768px) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__btn {
+    display: block;
+    max-width: 222px;
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 37px;
+    @include hover {
+      color: $color-accent;
+      .footer__btn-image-wrapper {
+        background: $color-accent;
+      }
+      .footer__btn-text {
+        color: $color-accent;
+      }
+    }
+    @include active {
+      filter: brightness(120%);
+    }
+    &--rotate {
+      transform: rotate(-90deg);
+      position: relative;
+      top: -50px;
+      right: 59px;
+      @media (max-width: 1900px) {
+        right: -50px;
+        top: -94px;
+      }
+      @media (max-width: 1400px) {
+        top: -50px;
+      }
+      @media (max-width: 1280px) {
+        max-width: 171px;
+        min-height: unset;
+        height: 44px;
+        gap: 11px;
+        top: 62px;
+        right: 0;
+      }
+      @media (max-width: 768px) {
+        right: 15px;
+      }
+    }
+    &-image {
+      width: 20px;
+      height: 22px;
+      stroke: $color-medium;
+      @media (max-width: 1280px) {
+        width: 14px;
+        height: 16px;
+      }
+      &--rotate {
+        transform: rotate(90deg);
+      }
+      &-wrapper {
+        transition: all 0.4s ease 0s;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: $round-btn-icon-bg;
+        @include flexCenter;
+        @media (max-width: 1280px) {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+    &-text {
+      transition: all 0.4s ease 0s;
+      font-family: $main-font-bold;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: $color-medium;
+      @media (max-width: 768px) {
+        position: relative;
+        top: 3px;
+      }
+    }
+  }
+}
