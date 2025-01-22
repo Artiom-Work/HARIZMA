@@ -1,0 +1,45 @@
+body {
+  font-family: $main-font-regular;
+  color: $color-light;
+  background: $main-bg;
+}
+
+.lock-body {
+  overflow: hidden;
+}
+.hide-layer {
+  position: relative;
+  z-index: -1;
+}
+.center {
+  max-width: 2060px;
+  width: 100%;
+  padding: 0 50px;
+  margin: 0 auto;
+  // background: linear-gradient(
+  // 	90deg,
+  // 	transparent 0%,
+  // 	transparent 11.5%,
+  // 	#313339 1px,
+  // 	transparent 11.6%,
+  // 	transparent 37.2%,
+  // 	#313339 1px,
+  // 	transparent 37.35%,
+  // 	transparent 64.01%,
+  // 	#313339 1px,
+  // 	transparent 64.15%,
+  // 	transparent 91.7%,
+  // 	#313339 1px,
+  // 	transparent 91.82%,
+  // 	transparent 100%
+  // );
+  @media (max-width: 1000px) {
+    padding: 0 30px;
+  }
+  @media (max-width: 768px) {
+    padding: 0 18px;
+  }
+  .block-title {
+    @extend %block-title;
+  }
+}

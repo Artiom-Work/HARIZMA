@@ -1,5 +1,7 @@
 .nav {
   white-space: nowrap;
+  position: relative;
+  z-index: 1;
   &__link {
     color: $color-light;
     transition: all 0.4s ease 0s;

@@ -58,12 +58,18 @@ $accent-btn-bg-secondary: linear-gradient(
 $round-btn-icon-bg: #2e3441;
 
 // fonts
-$main-font-regular: "muller-regular";
-$main-font-medium: "muller-medium";
-$main-font-bold: "muller-bold";
-$main-font-extra-bold: "muller-extra-bold";
-$main-font-black: "muller-black";
+$main-font-regular: "muller-regular", sans-serif;
+$main-font-medium: "muller-medium", sans-serif;
+$main-font-bold: "muller-bold", sans-serif;
+$main-font-extra-bold: "muller-extra-bold", sans-serif;
+$main-font-black: "muller-black", sans-serif;
 // properties
-// $border: 1px solid blue;
+%block-title {
+  font-family: $main-font-black;
+  font-size: 75px;
+  line-height: 109%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
 // paths
 $image-path: "../../images";

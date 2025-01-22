@@ -2,6 +2,9 @@
   min-height: 139px;
   background: $main-bg;
   border-bottom: 1px dashed #313339;
+  @media (max-width: 1040px) {
+    border-bottom: none;
+  }
   @media (max-width: 768px) {
     border-bottom: none;
     min-height: 79px;

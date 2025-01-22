@@ -5,51 +5,11 @@
 // connecting scss files
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "_general.scss";
 // blocks
 @import "./blocks/logo.scss";
 @import "./blocks/nav.scss";
 @import "./blocks/mobile-menu.scss";
 @import "./blocks/header.scss";
+@import "./blocks/promo.scss";
 @import "./blocks/footer.scss";
-
-// properties
-body {
-  font-family: $main-font-regular, sans-serif;
-  color: $color-light;
-  background: $main-bg;
-}
-.main {
-  min-height: 50vh;
-}
-.lock-body {
-  overflow: hidden;
-}
-.center {
-  max-width: 2060px;
-  width: 100%;
-  padding: 0 50px;
-  margin: 0 auto;
-  // background: linear-gradient(
-  // 	90deg,
-  // 	transparent 0%,
-  // 	transparent 11.5%,
-  // 	#313339 1px,
-  // 	transparent 11.6%,
-  // 	transparent 37.2%,
-  // 	#313339 1px,
-  // 	transparent 37.35%,
-  // 	transparent 64.01%,
-  // 	#313339 1px,
-  // 	transparent 64.15%,
-  // 	transparent 91.7%,
-  // 	#313339 1px,
-  // 	transparent 91.82%,
-  // 	transparent 100%
-  // );
-  @media (max-width: 1000px) {
-    padding: 0 30px;
-  }
-  @media (max-width: 768px) {
-    padding: 0 18px;
-  }
-}
