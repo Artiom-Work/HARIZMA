@@ -2,34 +2,12 @@
   .center {
     position: relative;
     min-height: 731px;
-    padding: 103px 51px 78px 71px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      transparent 11.5%,
-      #313339 1px,
-      transparent 11.6%,
-      transparent 37.2%,
-      #313339 1px,
-      transparent 37.35%,
-      transparent 100%
-    );
-    @media (max-width: 1815px) {
-      background: linear-gradient(
-        90deg,
-        transparent 0%,
-        transparent 11.5%,
-        #313339 1px,
-        transparent 11.6%,
-        transparent 100%
-      );
-    }
+    padding: 103px 51px 78px 51px;
     @media (max-width: 1400px) {
       padding: 103px 20px 78px 20px;
     }
     @media (max-width: 1040px) {
       padding: 43px 20px 32px 20px;
-      background: transparent;
     }
     @media (max-width: 1040px) {
       padding: 43px 20px 32px 100px;
@@ -40,11 +18,12 @@
     &::before {
       position: absolute;
       content: "";
-      width: 25.4%;
+      width: 26.6%;
       border-right: 1px solid #313339;
-      min-height: 873px;
-      top: -140px;
-      left: 11.7%;
+      border-left: 1px solid #313339;
+      min-height: 733px;
+      bottom: 0;
+      left: 10.65%;
       background: linear-gradient(
         180deg,
         rgba(96, 101, 113, 0) 0%,
@@ -52,15 +31,18 @@
       );
       z-index: 1;
       @media (max-width: 1450px) {
-        min-height: 934px;
+        min-height: 795px;
       }
       @media (max-width: 1040px) {
-        width: 18.8%;
+        width: 11.6%;
         border-right: 1px solid #313339;
         min-height: 100%;
         top: 0px;
         left: 0;
         background: transparent;
+      }
+      @media (max-width: 768px) {
+        width: 18.8%;
       }
     }
     &::after {
@@ -288,7 +270,7 @@
       background: url(../../images/promo/around-the-clock.png) no-repeat center -32px /
         138%;
       top: 546px;
-      right: 727px;
+      right: 708px;
       z-index: 1;
       @media (max-width: 1815px) {
         top: 538px;
@@ -326,7 +308,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right;
     @media (max-width: 1560px) {
       object-position: right -300px top 0;
     }
@@ -350,7 +331,7 @@
     &-wrapper {
       position: absolute;
       bottom: 131px;
-      right: 80px;
+      right: 60px;
       transform: rotate(-90deg);
       z-index: 1;
       @include flexCenterSpaceBetwen;

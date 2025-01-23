@@ -28,7 +28,29 @@ function bodyLock() {
 function bodyUnlock() {
 	document.body.classList.remove('lock-body');
 	if (main && footer) {
-		main.classList.remove('hide-layer');
-		footer.classList.remove('hide-layer');
+		function visibleLayer() {
+			main.classList.remove('hide-layer');
+			footer.classList.remove('hide-layer');
+		}
+
+		setTimeout(visibleLayer, 400);
 	}
 }
+//redirect paths to SVG images that are not displayed on iron brousers
+
+document.addEventListener("DOMContentLoaded", function () {
+	const userAgent = navigator.userAgent.toLowerCase();
+	const isIron = userAgent.includes('iron');
+
+
+	if (isIron) {
+		const svgIcons = document.querySelectorAll('.iron-image');
+		const additionToHref = '-iron';
+		svgIcons.forEach(function (svgIcon) {
+			const newHref = svgIcon.children[0].getAttribute('xlink:href') + additionToHref;
+			console.log(newHref);
+			svgIcon.children[0].setAttribute('xlink:href', newHref);
+		});
+	}
+});
+// ========

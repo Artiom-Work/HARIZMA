@@ -1,0 +1,123 @@
+.possibilities {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  &__list {
+    min-height: 130px;
+    display: grid;
+    grid-template: auto/ repeat(4, 1fr);
+    @media (max-width: 1280px) {
+      min-height: 103px;
+    }
+    @media (max-width: 850px) {
+      grid-template: auto/ repeat(2, 1fr);
+    }
+  }
+  &__item {
+    width: 100%;
+    min-height: inherit;
+    @include flexCenter;
+    gap: 94px;
+    background-color: $bg-cards-dark-secondary;
+    @media (max-width: 1550px) {
+      gap: 50px;
+    }
+    @media (max-width: 1170px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 5.5px;
+      padding: 0 0 0 62px;
+    }
+    @media (max-width: 1170px) {
+      padding: 0 22px;
+    }
+    @media (max-width: 850px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+      gap: 50px;
+    }
+    @media (max-width: 550px) {
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      gap: 5.5px;
+      padding: 3px 5px 0 25px;
+    }
+    @media (max-width: 850px) {
+      &:nth-child(3) {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+    &:nth-child(even) {
+      background-color: $bg-cards-dark;
+    }
+
+    &:nth-child(1) .possibilities__image-wrapper {
+      width: 54.74px;
+      height: 67.31px;
+      @media (max-width: 1320px) {
+        width: 29.71px;
+        height: 36.54px;
+      }
+    }
+    &:nth-child(2) .possibilities__image-wrapper {
+      width: 61.63px;
+      height: 61.62px;
+      @media (max-width: 1320px) {
+        width: 33.12px;
+        height: 33.11px;
+      }
+    }
+    &:nth-child(3) .possibilities__image-wrapper {
+      width: 67.92px;
+      height: 63.58px;
+      @media (max-width: 1320px) {
+        width: 35.96px;
+        height: 34.6px;
+      }
+    }
+    &:nth-child(4) .possibilities__image-wrapper {
+      width: 61.2px;
+      height: 59.92px;
+      @media (max-width: 1320px) {
+        width: 33.3px;
+        height: 31.73px;
+      }
+    }
+  }
+
+  &__image {
+    width: inherit;
+    height: inherit;
+    fill: $color-accent;
+    &-wrapper {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 34px;
+        height: 1px;
+        background: rgba(255, 198, 25, 0.3);
+        right: -53px;
+        top: 50%;
+        @media (max-width: 1550px) {
+          width: 18px;
+          right: -30px;
+        }
+      }
+    }
+  }
+  &__text {
+    max-width: 192px;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: $color-light;
+    @media (max-width: 1280px) {
+      font-size: 14px;
+      line-height: 136%;
+    }
+  }
+}
