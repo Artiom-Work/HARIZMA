@@ -2,6 +2,7 @@
 $color-light: #fff;
 $color-medium: #606571;
 $color-accent: #f69020;
+$color-accent-light: #ffc619;
 
 $color-border: #393c43;
 
@@ -12,6 +13,9 @@ $bg-icons-light: rgba(255, 255, 255, 0.07);
 $bg-cards-dark: #202124;
 $bg-cards-dark-secondary: #282b32;
 $bg-cards-dark-secondary-hover: #343740;
+
+$text-color-description: #c5c5c5;
+$btn-text-color-dark: #252121;
 
 $bg-center-lines: linear-gradient(
   90deg,
@@ -42,7 +46,6 @@ $bg-center-lines-mobile: linear-gradient(
   transparent 100%
 );
 
-$btn-text-color-dark: #252121;
 $accent-btn-bg-main: linear-gradient(
   141deg,
   #ea422a 0%,
@@ -56,7 +59,6 @@ $accent-btn-bg-secondary: linear-gradient(
   #ec5128 100%
 );
 $round-btn-icon-bg: #2e3441;
-
 // fonts
 $main-font-regular: "muller-regular", sans-serif;
 $main-font-medium: "muller-medium", sans-serif;
@@ -70,6 +72,10 @@ $main-font-black: "muller-black", sans-serif;
   line-height: 109%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 36px;
+    line-height: 133%;
+  }
 }
 // paths
 $image-path: "../../images";

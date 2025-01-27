@@ -12,7 +12,7 @@ body {
   z-index: -1;
 }
 .center {
-  max-width: 2060px;
+  max-width: 2020px;
   width: 100%;
   padding: 0 50px;
   margin: 0 auto;
@@ -39,7 +39,57 @@ body {
   @media (max-width: 768px) {
     padding: 0 18px;
   }
-  .block-title {
-    @extend %block-title;
+}
+.block-title {
+  @extend %block-title;
+}
+.decor-background {
+  position: absolute;
+  content: "";
+  width: 26.2%;
+  border-right: 1px solid #313339;
+  border-left: 1px solid #313339;
+  min-height: 100%;
+  bottom: 0;
+  left: 10.65%;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(96, 101, 113, 0)),
+    to(rgba(96, 101, 113, 0.05))
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(96, 101, 113, 0) 0%,
+    rgba(96, 101, 113, 0.05) 100%
+  );
+  z-index: 1;
+}
+.btn {
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  @include button(
+    $main-font-bold,
+    13px,
+    100%,
+    $btn-text-color-dark,
+    $accent-btn-bg-main,
+    30px 42px 27px,
+    60px
+  );
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  @include hover {
+    filter: brightness(80%);
+  }
+  @include active {
+    filter: brightness(120%);
+    transform: scale(0.98);
+  }
+  @media (max-width: 768px) {
+    font-size: 11px;
+    padding: 20.5px 30px 18.5px;
   }
 }

@@ -18,7 +18,7 @@
     &::before {
       position: absolute;
       content: "";
-      width: 26.6%;
+      width: 26.2%;
       border-right: 1px solid #313339;
       border-left: 1px solid #313339;
       min-height: 733px;
@@ -207,27 +207,6 @@
     }
   }
   &__description-button {
-    display: block;
-    transition: all 0.4s ease 0s;
-    @include button(
-      $main-font-bold,
-      13px,
-      100%,
-      $btn-text-color-dark,
-      $accent-btn-bg-main,
-      28px 43px,
-      60px
-    );
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center;
-    @include hover {
-      filter: brightness(80%);
-    }
-    @include active {
-      filter: brightness(120%);
-      transform: scale(0.98);
-    }
     @media (max-width: 1480px) {
       font-size: 11px;
       padding: 20.5px 30px 18.5px;
