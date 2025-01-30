@@ -12,7 +12,7 @@
     @media (max-width: 1280px) {
       flex-direction: column;
       align-items: start;
-      padding: 98px 30px 120px 50px;
+      padding: 98px 30px 120px;
       gap: 50px;
     }
     @media (max-width: 768px) {
@@ -108,7 +108,7 @@
       flex-direction: column;
       flex-wrap: wrap;
       gap: 11px;
-      height: 500px;
+      height: 670px;
     }
     @media (max-width: 810px) {
       height: 700px;

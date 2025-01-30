@@ -2,15 +2,20 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0 0 50px;
   position: relative;
+  height: 1000px;
   display: grid;
-  grid-template: repeat(2, auto) / minmax(auto, 462px) 1fr;
+  grid-template: repeat(2, auto) / auto 1fr;
   grid-template-areas:
     "top slider"
     "bottom slider";
-  @media (max-width: 768px) {
-    padding: 0;
+  @media (max-width: 1280px) {
+    padding: 54px 0 56px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $dark-bg;
   }
   &::before {
     position: absolute;
@@ -27,14 +32,43 @@
     }
   }
   &__top {
+    max-width: 513px;
+    width: 100%;
+    padding: 0 0 0 50px;
     grid-area: top;
-    margin: 0 0 38px;
+    margin: 0 0 33px;
+    @media (max-width: 1280px) {
+      max-width: unset;
+      padding: 0 0 0 30px;
+    }
     @media (max-width: 768px) {
       margin: 0 0 14px;
+      padding: 0 20px;
+    }
+    @media (max-width: 560px) {
+      margin: 0 0 5px;
     }
   }
   &__bottom {
+    max-width: 513px;
+    width: 100%;
+    min-height: 522px;
+    padding: 0 0 0 50px;
     grid-area: bottom;
+    @media (max-width: 1280px) {
+      min-height: unset;
+      padding: 0 30px;
+      order: 1;
+      max-width: unset;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (max-width: 768px) {
+      padding: 0 20px;
+      flex-direction: column;
+      align-items: start;
+    }
   }
   // ======slider======
   &__slider {
@@ -42,11 +76,120 @@
     max-width: 1407px;
     width: 100%;
     height: 1000px;
+    margin-left: auto;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 19px 25px -19px #000;
+    -moz-box-shadow: 0px 19px 25px -19px #000;
+    box-shadow: 0px 19px 25px -19px #000;
+    @media (max-width: 1280px) {
+      margin-left: unset;
+      max-width: 1280px;
+      margin: 0 0 27px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+    @media (max-width: 768px) {
+      height: 399px;
+    }
+    @media (max-width: 560px) {
+      height: 299px;
+    }
+    &-pagination {
+      width: 46% !important;
+      text-align: center;
+      font-family: $main-font-medium;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0.03em;
+      color: $color-medium !important;
+      @media (max-width: 1280px) {
+        font-size: 14px;
+      }
+      .swiper-pagination-current {
+        color: $color-light;
+        font-size: 24px;
+        @media (max-width: 1280px) {
+          font-size: 19px;
+        }
+      }
+      &-wrapper {
+        @include flexCenter;
+        width: 261px;
+        min-height: 70px;
+        position: relative;
+        z-index: 2;
+        margin: 0 0 61px;
+        @media (max-width: 1280px) {
+          margin: 0;
+          min-height: 52.3px;
+          width: 195px;
+        }
+        @media (max-width: 768px) {
+          margin: 0 0 26.7px;
+        }
+      }
+    }
+    &-button {
+      position: relative;
+      width: 70px;
+      height: 70px;
+      @include flexCenter;
+      cursor: pointer;
+      @media (max-width: 1280px) {
+        width: 52.3px;
+        height: 52.3px;
+      }
+      &::before {
+        transition: all 0.4s ease 0s;
+        position: absolute;
+        content: "";
+        width: inherit;
+        height: inherit;
+        border-radius: 50%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: $round-btn-icon-bg;
+        z-index: -1;
+      }
+      &.swiper-button-disabled::before {
+        background: transparent;
+        outline: 1px solid $round-btn-icon-bg;
+      }
+      &--next {
+        transform: rotate(90deg);
+      }
+      &--prev {
+        transform: rotate(-90deg);
+      }
+      &-image {
+        width: 20px;
+        height: 20px;
+        stroke: $color-medium;
+      }
+      @include hover {
+        &::before {
+          background: $color-accent;
+        }
+      }
+      @include active {
+        &::before {
+          transform: scale(0.96);
+        }
+      }
+    }
     .swiper {
       width: 100%;
       height: 100%;
       &-slide {
         @include flexCenter;
+        &__image-wrapper {
+          width: 100%;
+          height: 100%;
+        }
       }
       &-slide img {
         display: block;
@@ -57,19 +200,74 @@
     }
     .preview-swiper {
       height: 168px;
+      @media (max-width: 768px) {
+        height: 80px;
+      }
+      @media (max-width: 560px) {
+        height: 43px;
+      }
       & .swiper-slide {
+        transition: all 0.4s ease 0s;
         width: 20%;
         height: 100%;
         opacity: 0.4;
+        @include hover {
+          opacity: 1;
+        }
       }
       & .swiper-slide-thumb-active {
         opacity: 1;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: url(../../../images/icons/icon-eye.svg) no-repeat center
+              48% / 18%,
+            transparentize($color: $color-accent-light, $amount: 0.6);
+          z-index: 1;
+          @media (max-width: 768px) {
+            background: url(../../../images/icons/icon-eye.svg) no-repeat center
+                55%/ 43%,
+              transparentize($color: $color-accent-light, $amount: 0.6);
+          }
+        }
+      }
+      & .swiper-slide__image-wrapper {
+        position: relative;
+        cursor: pointer;
+        transition: all 0.4s ease 0s;
+        @include hover {
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(../../../images/icons/icon-eye.svg) no-repeat center
+                48% / 18%,
+              transparentize($color: $color-accent-light, $amount: 0.6);
+          }
+        }
       }
     }
 
     .preview-swiper2 {
       height: 832px;
       width: 100%;
+      @media (max-width: 768px) {
+        height: 319px;
+      }
+      @media (max-width: 560px) {
+        height: 256px;
+      }
     }
   }
 
@@ -79,12 +277,18 @@
     max-width: 432px;
     width: 100%;
     min-height: 216px;
+    @media (max-width: 1280px) {
+      max-width: unset;
+      margin: 0 0 50px;
+      min-height: 150px;
+    }
     @media (max-width: 768px) {
-      margin: 0 0 39px;
+      min-height: 111px;
+      margin: 0 0 37px;
     }
   }
   &__title {
-    margin: 0 0 46px;
+    margin: 0 0 45px;
     position: relative;
     z-index: 2;
     &-lable {
@@ -105,8 +309,12 @@
   &__button {
     padding: 30px 77px 27px;
     margin: 0 0 98px;
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
       margin: 0;
+      padding: 21.5px 59px 18px;
+    }
+    @media (max-width: 768px) {
+      padding: 21.5px 59px 18px;
     }
   }
 }
@@ -116,8 +324,16 @@
   width: 100%;
   min-height: 15px;
   @include flexCenterSpaceBetwen;
+  flex-wrap: wrap;
   // &-item {
   // }
+  @media (max-width: 1280px) {
+    max-width: 615px;
+  }
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    column-gap: 42px;
+  }
   &-button {
     font-family: $main-font-bold;
     font-size: 15px;
@@ -128,19 +344,27 @@
     color: $color-medium;
     background: transparent;
     cursor: pointer;
+    @media (max-width: 1280px) {
+      font-size: 22px;
+    }
+    @media (max-width: 768px) {
+      font-size: 15px;
+      letter-spacing: 0;
+    }
     &--active {
       color: $color-accent-light;
     }
   }
 }
-// &__list-description {
-// }
 .list-description {
-  margin: 0 0 209px;
+  margin: 0 0 78px;
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 11px;
+  @media (max-width: 1280px) {
+    margin: 0;
+  }
   &__item {
     width: 100%;
     display: flex;
@@ -177,7 +401,7 @@
     }
   }
   @media (max-width: 768px) {
-    margin: 0 0 107px;
+    margin: 0 0 29px;
   }
   &__image {
     width: inherit;

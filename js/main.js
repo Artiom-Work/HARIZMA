@@ -56,43 +56,44 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // For block preview (slider)
 
-
 const swiper = new Swiper(".preview-swiper", {
 	spaceBetween: 0,
 	slidesPerView: 5,
 	freeMode: true,
 	watchSlidesProgress: true,
+	breakpoints: {
+		1500: {
+			slidesPerView: 5,
+		},
+		1280: {
+			slidesPerView: 4,
+		},
+		1000: {
+			slidesPerView: 5,
+		},
+		768: {
+			slidesPerView: 4,
+		}
+	},
 });
 const swiper2 = new Swiper(".preview-swiper2", {
 	spaceBetween: 10,
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
 	thumbs: {
 		swiper: swiper,
 	},
+	pagination: {
+		el: ".preview__slider-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".preview__slider-button--next",
+		prevEl: ".preview__slider-button--prev",
+	},
 });
 
-const resizeObserver = new ResizeObserver((entries) => {
-	entries.forEach(entry => {
-		console.log('Размеры изменились:', entry.contentRect);
-		// Здесь можно обновить размеры слайдера
-		swiper.update();
-		swiper2.update();
-	});
-});
-
-// Наблюдаем за элементом
-const swiperContainer1 = document.querySelector('.preview-swiper');
-const swiperContainer2 = document.querySelector('.preview-swiper2');
-
-resizeObserver.observe(swiperContainer1);
-resizeObserver.observe(swiperContainer2);
-
-window.addEventListener('resize', () => {
-	swiper.update();
-	swiper2.update();
-});
+const sliderPagination = document.querySelector('.preview__slider-pagination');
+let paginationText = sliderPagination.innerHTML;
+paginationText = paginationText.replace(' / ', ' из ');
+sliderPagination.innerHTML = paginationText;
 
 
