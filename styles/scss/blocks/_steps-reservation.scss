@@ -1,0 +1,218 @@
+.steps-reservation {
+  background: $dark-bg;
+  .center {
+    position: relative;
+    padding: 109px 0 96px 51px;
+    overflow: hidden;
+    @media (max-width: 768px) {
+      padding: 67px 0 137.44px 18px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 10.68%;
+      border-right: 1px solid #313339;
+      min-height: 100%;
+      bottom: 0;
+      left: 0;
+      background: transparent;
+      z-index: 0;
+      @media (max-width: 768px) {
+        width: 19.08%;
+      }
+    }
+    &::before {
+      @media (min-width: 1500px) {
+        left: 52.45%;
+      }
+    }
+    &::after {
+      left: unset;
+      right: 0;
+      border-left: 1px solid #313339;
+      border-right: none;
+      @media (max-width: 768px) {
+        width: 16.58%;
+      }
+    }
+  }
+  &__heading {
+    margin: 0 0 55px;
+    @media (max-width: 768px) {
+      margin: 0 0 48px;
+    }
+  }
+  &__title {
+    margin: 0 0 31px;
+    @media (max-width: 768px) {
+      margin: 0 0 27px;
+      letter-spacing: -0.03em;
+    }
+  }
+  &__subtitle {
+    font-size: 24px;
+    line-height: 200%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 128%;
+    }
+  }
+  &__slider-pagination-wrapper {
+    position: absolute;
+    right: 2.7%;
+    top: 194px;
+    width: 250px;
+    margin: 0;
+    @media (max-width: 1280px) {
+      width: 195px;
+      right: calc(50% - 97.5px);
+      top: unset;
+      bottom: 35px;
+    }
+    @media (max-width: 560px) {
+      right: unset;
+      bottom: 68px;
+    }
+  }
+  &__slider {
+    min-height: 593px;
+    margin: 0px 0 0 -128px;
+    @media (max-width: 768px) {
+      min-height: 475px;
+      margin: 0 0 0 -103px;
+    }
+  }
+}
+.reservation-step {
+  transition: opacity 0.8s ease, max-width 0.4s ease !important;
+  max-width: 285px;
+  width: 100%;
+  min-height: 593px;
+  position: relative;
+  &.swiper-slide-active .reservation-step__counter {
+    display: inline;
+  }
+  @media (max-width: 768px) {
+    min-height: 475px;
+    max-width: 233px;
+  }
+  &__counter {
+    display: none;
+    position: absolute;
+    top: -19px;
+    right: -22px;
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+    background-color: $color-accent;
+    text-align: center;
+    font-family: $main-font-bold;
+    font-size: 18px;
+    line-height: 64px;
+    text-align: center;
+    color: $color-light;
+    z-index: 1;
+    @media (max-width: 768px) {
+      top: -13px;
+      right: -13px;
+      width: 50.05px;
+      height: 50.05px;
+      line-height: 50.05px;
+    }
+  }
+  &__image {
+    width: 252px;
+    height: 487px;
+    height: 488.92px;
+    @media (max-width: 768px) {
+      width: 206.77px;
+      height: 401.92px;
+    }
+    &-wrapper {
+      position: relative;
+      width: 285px;
+      height: 505px;
+      padding: 0px 15px 14px 18px;
+      margin: 0 auto 19px;
+      @media (max-width: 768px) {
+        width: 233.85px;
+        height: 411.36px;
+        padding: 0px 12.31px 11.49px 14.77px;
+      }
+      &--active {
+        &::before {
+          position: absolute;
+          content: "";
+          width: inherit;
+          height: inherit;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: url(../../../images/steps-reservation/iphone-frame.svg)
+            no-repeat center / cover;
+        }
+      }
+    }
+  }
+  &__description {
+    @include flexCenterSpaceBetwen;
+    padding: 0 18px 0;
+    @media (max-width: 768px) {
+      padding: 0 10.46px 0 12.76px;
+      justify-content: flex-start;
+      gap: 21px;
+    }
+  }
+  &__description-image {
+    width: 35px;
+    height: 35px;
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
+    &--door {
+      width: 32px;
+      height: 32px;
+      @media (max-width: 768px) {
+        width: 26.26px;
+        height: 26.26px;
+      }
+    }
+    &--many-people {
+      width: 37.71px;
+      height: 36.09px;
+      @media (max-width: 768px) {
+        width: 30.94px;
+        height: 29.61px;
+      }
+    }
+    &--clock {
+      width: 37.59px;
+      height: 37.59px;
+    }
+    &--calendar {
+      width: 34.96px;
+      height: 36.48px;
+    }
+  }
+  &__description-text {
+    width: 195px;
+    font-family: $main-font-regular;
+    font-size: 15px;
+    line-height: 133%;
+    letter-spacing: 0.03em;
+    @media (max-width: 768px) {
+      letter-spacing: 0;
+      width: 160px;
+      line-height: 136%;
+    }
+  }
+  &__description-link {
+    display: block;
+    color: $color-accent;
+  }
+}

@@ -65,6 +65,9 @@ body {
     rgba(96, 101, 113, 0.05) 100%
   );
   z-index: 1;
+  @media (max-width: 1500px) {
+    display: none;
+  }
 }
 .btn {
   display: inline-block;
@@ -92,4 +95,15 @@ body {
     font-size: 11px;
     padding: 20.5px 30px 18.5px;
   }
+}
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-20 {
+  opacity: 0.2;
 }

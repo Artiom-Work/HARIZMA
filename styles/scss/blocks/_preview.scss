@@ -20,13 +20,16 @@
   &::before {
     position: absolute;
     content: "";
-    width: 10.68%;
+    width: 8.58%;
     border-right: 1px solid #ffc6194d;
     min-height: 100%;
     bottom: 0;
     left: 0;
     background: transparent;
     z-index: -1;
+    @media (max-width: 1920px) {
+      width: 10.68%;
+    }
     @media (max-width: 1000px) {
       display: none;
     }
@@ -78,15 +81,11 @@
     height: 1000px;
     margin-left: auto;
     overflow: hidden;
-    -webkit-box-shadow: 0px 19px 25px -19px #000;
-    -moz-box-shadow: 0px 19px 25px -19px #000;
     box-shadow: 0px 19px 25px -19px #000;
     @media (max-width: 1280px) {
       margin-left: unset;
       max-width: 1280px;
       margin: 0 0 27px;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
       box-shadow: none;
     }
     @media (max-width: 768px) {
@@ -94,92 +93,6 @@
     }
     @media (max-width: 560px) {
       height: 299px;
-    }
-    &-pagination {
-      width: 46% !important;
-      text-align: center;
-      font-family: $main-font-medium;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 100%;
-      letter-spacing: 0.03em;
-      color: $color-medium !important;
-      @media (max-width: 1280px) {
-        font-size: 14px;
-      }
-      .swiper-pagination-current {
-        color: $color-light;
-        font-size: 24px;
-        @media (max-width: 1280px) {
-          font-size: 19px;
-        }
-      }
-      &-wrapper {
-        @include flexCenter;
-        width: 261px;
-        min-height: 70px;
-        position: relative;
-        z-index: 2;
-        margin: 0 0 61px;
-        @media (max-width: 1280px) {
-          margin: 0;
-          min-height: 52.3px;
-          width: 195px;
-        }
-        @media (max-width: 768px) {
-          margin: 0 0 26.7px;
-        }
-      }
-    }
-    &-button {
-      position: relative;
-      width: 70px;
-      height: 70px;
-      @include flexCenter;
-      cursor: pointer;
-      @media (max-width: 1280px) {
-        width: 52.3px;
-        height: 52.3px;
-      }
-      &::before {
-        transition: all 0.4s ease 0s;
-        position: absolute;
-        content: "";
-        width: inherit;
-        height: inherit;
-        border-radius: 50%;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background: $round-btn-icon-bg;
-        z-index: -1;
-      }
-      &.swiper-button-disabled::before {
-        background: transparent;
-        outline: 1px solid $round-btn-icon-bg;
-      }
-      &--next {
-        transform: rotate(90deg);
-      }
-      &--prev {
-        transform: rotate(-90deg);
-      }
-      &-image {
-        width: 20px;
-        height: 20px;
-        stroke: $color-medium;
-      }
-      @include hover {
-        &::before {
-          background: $color-accent;
-        }
-      }
-      @include active {
-        &::before {
-          transform: scale(0.96);
-        }
-      }
     }
     .swiper {
       width: 100%;

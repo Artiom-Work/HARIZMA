@@ -91,9 +91,121 @@ const swiper2 = new Swiper(".preview-swiper2", {
 	},
 });
 
-const sliderPagination = document.querySelector('.preview__slider-pagination');
-let paginationText = sliderPagination.innerHTML;
-paginationText = paginationText.replace(' / ', ' из ');
-sliderPagination.innerHTML = paginationText;
+// For block steps-reservation (slider)
+
+const mediaQuery = window.matchMedia('(max-width: 1280px)');
+let tablet = true;
+function handleMediaChange(e) {
+	tablet = e.matches
+}
+// Вызываем функцию при инициализации
+handleMediaChange(mediaQuery);
+// Добавляем слушатель для изменения состояния медиазапроса
+mediaQuery.addEventListener('change', handleMediaChange);
+
+const swiper3 = new Swiper(".steps-reservation__slider", {
+	slidesPerView: 'auto',
+	centeredSlides: true,
+	spaceBetween: 33,
+	grabCursor: true,
+	pagination: {
+		el: ".steps-reservation__slider-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".steps-reservation__slider-button--next",
+		prevEl: ".steps-reservation__slider-button--prev",
+	},
+	breakpoints: {
+		1280: {
+			spaceBetween: 72
+		}
+	},
+	on: {
+		init: function () {
+			updateSlideOpacity(this); // Устанавливаем начальную прозрачность
+		},
+		slideChange: function () {
+			updateSlideOpacity(this); // Обновляем прозрачность при смене слайда
+			// Получаем все слайды внутри слайдера
+
+			const slides = this.slides; // Используем `this.slides`, чтобы получить доступ к слайдам
+
+			// Удаляем класс у всех слайдов
+			slides.forEach(slide => {
+				const slideImageFrame = slide.querySelector('.reservation-step__image-wrapper');
+				if (slideImageFrame) { // Проверяем, существует ли элемент
+					slideImageFrame.classList.remove('reservation-step__image-wrapper--active');
+				}
+				const counter = slide.querySelector('.slide-counter');
+				if (counter) {
+					counter.style.display = 'none';
+				}
+			});
+
+			// Находим активный слайд
+			const activeSlide = slides[this.activeIndex];
+			const slideImageFrame = activeSlide.querySelector('.reservation-step__image-wrapper');
+
+			// Добавляем класс к активному слайду
+			if (slideImageFrame) { // Проверяем, существует ли элемент
+				slideImageFrame.classList.add('reservation-step__image-wrapper--active');
+			}
+			// Обновляем и показываем счётчик на активном слайде
+			const activeCounter = activeSlide.querySelector('.slide-counter');
+			if (activeCounter) {
+				activeCounter.textContent = `${this.activeIndex + 1}`; // Обновляем текст счётчика
+				activeCounter.style.display = 'block'; // Показываем счётчик
+			}
+		}
+	}
+});
+// Функция для обновления прозрачности слайдов
+function updateSlideOpacity(swiper) {
+	if (tablet) {
+		newSlideOpacityModile(swiper);
+	} else {
+		newSlideOpacity(swiper);
+	}
+
+	function newSlideOpacity() {
+		const slides = swiper.slides;
+
+		slides.forEach((slide, index) => {
+			slide.classList.remove('opacity-100', 'opacity-50', 'opacity-20'); // Удаляем все классы
+
+			if (index === swiper.activeIndex) {
+				slide.classList.add('opacity-100'); // Активный слайд
+			} else if (index === swiper.activeIndex - 1 || index === swiper.activeIndex + 1) {
+				slide.classList.add('opacity-100'); // Предыдущий и следующий слайды
+			} else if (index === swiper.activeIndex + 2 || index === swiper.activeIndex - 2) {
+				slide.classList.add('opacity-50'); // Слайды дальше от активного
+			} else if (index > swiper.activeIndex + 2 || index < swiper.activeIndex - 2) {
+				slide.classList.add('opacity-20'); // Остальные слайды
+			}
+		});
+	}
+
+	function newSlideOpacityModile() {
+		const slides = swiper.slides;
+
+		slides.forEach((slide, index) => {
+			slide.classList.remove('opacity-100', 'opacity-50', 'opacity-20'); // Удаляем все классы
+			slide.classList.add('max-width-mobile');
+			if (index === swiper.activeIndex) {
+				slide.classList.add('opacity-100'); // Активный слайд
+			} else if (index >= swiper.activeIndex - 1 || index <= swiper.activeIndex + 1) {
+				slide.classList.add('opacity-50'); // Предыдущий и следующий слайды
+			}
+		});
+	}
+}
 
 
+// Changing the content of the block with pagination for sliders 1, 2 and 3
+const sliderPagination = document.querySelectorAll('.slider-pagination');
+sliderPagination.forEach(function (e) {
+	let paginationText = e.innerHTML;
+	paginationText = paginationText.replace(' / ', ' из ');
+	e.innerHTML = paginationText;
+});

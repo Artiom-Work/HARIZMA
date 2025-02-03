@@ -333,19 +333,21 @@
 						</spam>
 					</li>
 				</ul>
-				<div class="preview__slider-pagination-wrapper">
-					<div class="preview__slider-button--prev preview__slider-button">
-						<svg class="preview__slider-button-image" viewBox="0 0 27 27">
+
+				<div class="preview__slider-pagination-wrapper slider-pagination-wrapper">
+					<div class="preview__slider-button--prev preview__slider-button slider-button slider-button--prev">
+						<svg class="preview__slider-button-image slider-button-image" viewBox="0 0 27 27">
 							<use xlink:href="./images/icons/sprite-icons.svg#button-arrow"></use>
 						</svg>
 					</div>
-					<div class="preview__slider-pagination"></div>
-					<div class="preview__slider-button--next preview__slider-button">
-						<svg class="preview__slider-button-image" viewBox="0 0 27 27">
+					<div class="preview__slider-pagination slider-pagination"></div>
+					<div class="preview__slider-button--next preview__slider-button slider-button slider-button--next">
+						<svg class="preview__slider-button-image slider-button-image" viewBox="0 0 27 27">
 							<use xlink:href="./images/icons/sprite-icons.svg#button-arrow"></use>
 						</svg>
 					</div>
 				</div>
+
 				<a class="preview__button btn" href="#!">Забронировать</a>
 			</div>
 		</section>
@@ -471,9 +473,153 @@
 			</div>
 		</section>
 
+		<section class="steps-reservation">
+			<div class="center">
+				<div class="decor-background"></div>
+				<div class="steps-reservation__heading">
+					<h2 class="steps-reservation__title block-title">
+						Как забронировать зал?
+					</h2>
+					<p class="steps-reservation__subtitle">
+						бронирование по&nbsp;шагам в&nbsp;чат-боте
+					</p>
+				</div>
+
+				<div class="steps-reservation__slider-pagination-wrapper slider-pagination-wrapper">
+					<div
+						class="steps-reservation__slider-button--prev steps-reservation__slider-button slider-button slider-button--prev">
+						<svg class="steps-reservation__slider-button-image slider-button-image" viewBox="0 0 27 27">
+							<use xlink:href="./images/icons/sprite-icons.svg#button-arrow"></use>
+						</svg>
+					</div>
+					<div class="steps-reservation__slider-pagination slider-pagination"></div>
+					<div
+						class="steps-reservation__slider-button--next steps-reservation__slider-button slider-button slider-button--next">
+						<svg class="steps-reservation__slider-button-image slider-button-image" viewBox="0 0 27 27">
+							<use xlink:href="./images/icons/sprite-icons.svg#button-arrow"></use>
+						</svg>
+					</div>
+				</div>
+
+				<div class="steps-reservation__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter">1</span>
+							<div class="reservation-step__image-wrapper reservation-step__image-wrapper--active">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-1.png" alt="Шаг 1">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--door iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#door"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Перейти в&nbsp;чат-бот
+									<a class="reservation-step__description-link" href="https://telegram.org/"
+										target="_blank">fh_harizma_bot</a>
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-2.png" alt="Шаг 2">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg
+									class="reservation-step__description-image reservation-step__description-image--many-people iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#many-people"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Выбрать колличество&nbsp;человек
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-3.png" alt="Шаг 3">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--clock iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#clock"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Выбрать колличество часов посещения
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-4.png" alt="Шаг 4">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg
+									class="reservation-step__description-image reservation-step__description-image--calendar iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#calendar"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Выбрать дату
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-5.png" alt="Шаг 5">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--clock iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#clock"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Выбрать время старта брони
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-6.png" alt="Шаг 6">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--door iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#door"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Перейти в&nbsp;чат-бот
+									<a class="reservation-step__description-link" href="https://telegram.org/"
+										target="_blank">fh_harizma_bot</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			</div>
+		</section>
+
 	</main>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="center">
 			<nav class="footer__nav nav">
 				<ul class="footer__nav-list">
@@ -537,7 +683,7 @@
 				</div>
 			</a>
 		</div>
-	</footer>
+	</footer> -->
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
