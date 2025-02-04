@@ -209,3 +209,13 @@ sliderPagination.forEach(function (e) {
 	paginationText = paginationText.replace(' / ', ' из ');
 	e.innerHTML = paginationText;
 });
+
+
+// For section faq
+
+$(function () {
+	$("#accordion").accordion({
+		active: 0,
+		collapsible: true
+	});
+});
