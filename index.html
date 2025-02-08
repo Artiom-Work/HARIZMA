@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>XARIZMA</title>
-	<link rel="stylesheet" href="styles/css/style.css">
+	<link rel="stylesheet" href="styles/css/dist/style.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
@@ -15,34 +15,40 @@
 		<div class="center">
 
 			<div class="logo header__logo">
-				<a class="logo__link" href="index.html">
+				<a class="logo__link" href="index.html" aria-label="Обновить страницу">
 					<img class="logo__image" src="./images/icons/logo.svg" alt="Логотип караоке бара">
 				</a>
 			</div>
 
 			<nav class="header__nav nav">
-				<a class="nav__link nav__link--desc" href="tel:380979709090" target="_blank">
-					<div class="nav__link-image-wrapper">
-						<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
-							<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
-						</svg>
-					</div>
-					<span class="nav__link-text">+38 (097) 970-90-90</span>
-				</a>
+				<address>
+					<a class="nav__link nav__link--desc" href="tel:380979709090" target="_blank" aria-label="Позвонить в бар">
+						<div class="nav__link-image-wrapper">
+							<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
+								<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
+							</svg>
+						</div>
+						<span class="nav__link-text">+38 (097) 970-90-90</span>
+					</a>
+				</address>
 
-				<a class="nav__link nav__link--map" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank">
-					<div class="nav__link-image-wrapper nav__link-image-wrapper--mobile">
-						<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
-							<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
-						</svg>
-					</div>
-					<span class="nav__link-text nav__link-text--color nav__link-text--desc">м.
-						Лубянка</span>
-				</a>
+				<address>
+					<a class="nav__link nav__link--map" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank"
+						aria-label="Посмотреть карту по адресу">
+						<div class="nav__link-image-wrapper nav__link-image-wrapper--mobile">
+							<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
+								<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
+							</svg>
+						</div>
+						<span class="nav__link-text nav__link-text--color nav__link-text--desc">м.
+							Лубянка</span>
+					</a>
+				</address>
 
 				<div class="nav__buttons-wrapper nav__buttons-wrapper--desc">
-					<a class="nav__btn" href="#preview">Наши залы</a>
-					<a class="nav__btn nav__btn--bg-color" href="#!">Забронировать</a>
+					<a class="nav__btn" href="#preview" aria-label="Посмотреть заллы">Наши залы</a>
+					<a class="nav__btn nav__btn--bg-color" href="#steps-reservation"
+						aria-label="Перейти к инструкции по бронированию">Забронировать</a>
 				</div>
 			</nav>
 
@@ -55,28 +61,35 @@
 				<div class="mobile-menu__wrapper">
 					<div class="mobile-menu__box">
 						<nav class="mobile-menu__nav nav">
-							<a class="nav__link nav__link--map" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank">
-								<div class="nav__link-image-wrapper">
-									<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
-										<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
-									</svg>
-								</div>
-								<span class="nav__link-text nav__link-text--color">м.
-									Лубянка</span>
-							</a>
+							<address>
+								<a class="nav__link nav__link--map" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank"
+									aria-label="Посмотреть карту по адресу">
+									<div class="nav__link-image-wrapper">
+										<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
+											<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
+										</svg>
+									</div>
+									<span class="nav__link-text nav__link-text--color">м.
+										Лубянка</span>
+								</a>
+							</address>
 
-							<a class="nav__link" href="tel:380979709090" target="_blank">
-								<div class="nav__link-image-wrapper">
-									<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
-										<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
-									</svg>
-								</div>
-								<span class="nav__link-text">+38 (097) 970-90-90</span>
-							</a>
+							<address>
+								<a class="nav__link" href="tel:380979709090" target="_blank" aria-label="Позвонить в бар">
+									<div class="nav__link-image-wrapper">
+										<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
+											<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
+										</svg>
+									</div>
+									<span class="nav__link-text">+38 (097) 970-90-90</span>
+								</a>
+							</address>
+
 
 							<div class="nav__buttons-wrapper nav__buttons-wrapper--mobile">
-								<a class="nav__btn" href="#!">Наши залы</a>
-								<a class="nav__btn nav__btn--bg-color" href="#!">Забронировать</a>
+								<a class="nav__btn" href="#preview" aria-label="Посмотреть заллы">Наши залы</a>
+								<a class="nav__btn nav__btn--bg-color" href="#steps-reservation"
+									aria-label="Перейти к инструкции по бронированию">Забронировать</a>
 							</div>
 						</nav>
 					</div>
@@ -89,6 +102,15 @@
 	<main>
 		<section class="promo">
 			<div class="center">
+				<a class="promo__link promo-link" href="https://telegram.org/" target="_blank" aria-label="Перейти в телеграмм">
+					<span class="promo-link__text">Связаться с&nbsp;нами</span>
+					<div class="promo-link__image-wrapper">
+						<svg class="promo-link__image" viewBox="0 0 27 27">
+							<use xlink:href="./images/icons/sprite-icons.svg#telegram-icon"></use>
+						</svg>
+					</div>
+				</a>
+
 				<div class="promo__description">
 					<h2 class="promo__subtitle">
 						Арендуй Караоке-Зал до&nbsp;10&nbsp;человек
@@ -100,19 +122,19 @@
 
 					<ul class="promo__advantages-list">
 						<li class="promo__advantages-item">
-							<spam class="promo__advantages-text">
+							<span class="promo__advantages-text">
 								Если хочешь попеть и&nbsp;оторваться
-							</spam>
+							</span>
 						</li>
 						<li class="promo__advantages-item">
-							<spam class="promo__advantages-text">
+							<span class="promo__advantages-text">
 								Отдохнуть после&nbsp;работы
-							</spam>
+							</span>
 						</li>
 						<li class="promo__advantages-item">
-							<spam class="promo__advantages-text">
+							<span class="promo__advantages-text">
 								Хорошо провести время
-							</spam>
+							</span>
 						</li>
 					</ul>
 
@@ -123,20 +145,12 @@
 				</div>
 
 				<picture class="promo__image-wrapper">
-					<source srcset="./images/promo/promo-background-1960.png, ./images/promo/promo-background-1960@2x.png 2x"
+					<source srcset="./images/promo/promo-background-1920.webp, ./images/promo/promo-background-1920@2x.webp 2x"
 						media="(min-width: 1040px)">
-					<img class="promo__image" src="./images/promo/promo-background-mobile.png"
-						srcset="./images/promo/promo-background-mobile@2x.png 2x" alt="Девушка поёт">
+					<img class="promo__image" src="./images/promo/promo-background-mobile.webp"
+						srcset="./images/promo/promo-background-mobile@2x.webp 2x" alt="Девушка поёт">
 				</picture>
 
-				<div class="promo__link-wrapper">
-					<a class="promo__link" href="https://telegram.org/" target="_blank">Связаться с&nbsp;нами</a>
-					<div class="promo__link-image-wrapper">
-						<svg class="promo__link-image" viewBox="0 0 27 27">
-							<use xlink:href="./images/icons/sprite-icons.svg#telegram-icon"></use>
-						</svg>
-					</div>
-				</div>
 			</div>
 		</section>
 
@@ -192,111 +206,29 @@
 
 				<ul class="preview__list">
 					<li class="preview__list-item">
-						<button class="preview__list-button preview__list-button--active">Hall &#8470;&nbsp;1</button>
+						<button class="preview__list-button preview__list-button--active" id="hall1"
+							aria-label="Просмотреть залл 1">Hall &#8470;&nbsp;1</button>
 					</li>
 					<li class="preview__list-item">
-						<button class="preview__list-button">Hall &#8470;&nbsp;2&nbsp;</button>
+						<button class="preview__list-button" id="hall2" aria-label="Просмотреть залл 2">Hall
+							&#8470;&nbsp;2&nbsp;</button>
 					</li>
 					<li class="preview__list-item">
-						<button class="preview__list-button">Hall &#8470;&nbsp;3</button>
+						<button class="preview__list-button" id="hall3" aria-label="Просмотреть залл 3">Hall &#8470;&nbsp;3</button>
 					</li>
 					<li class="preview__list-item">
-						<button class="preview__list-button">Hall &#8470;&nbsp;5</button>
+						<button class="preview__list-button" id="hall5" aria-label="Просмотреть залл 5">Hall &#8470;&nbsp;5</button>
 					</li>
 				</ul>
 			</div>
 
 			<div class="preview__slider">
-
 				<div class="swiper preview-swiper2">
-
-					<div class="swiper-wrapper">
-
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-1-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-2-hall-1-mobile.jpg" srcset="./images/review/picture-1-hall-1.jpg"
-									alt="фото первого залла" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-2-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-2-hall-1-mobile.jpg" srcset="./images/review/picture-2-hall-1.jpg"
-									alt="фото первого залла" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-3-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-3-hall-1-mobile.jpg" srcset="./images/review/picture-3-hall-1.jpg" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-4-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-4-hall-1-mobile.jpg" srcset="./images/review/picture-4-hall-1.jpg" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-5-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-5-hall-1-mobile.jpg" srcset="./images/review/picture-5-hall-1.jpg" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-6-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-6-hall-1-mobile.jpg" srcset="./images/review/picture-6-hall-1.jpg" />
-							</picture>
-						</div>
-					</div>
+					<div class="swiper-wrapper"></div>
 				</div>
 
-				<div thumbsSlider="" class="swiper preview-swiper">
-					<div class="swiper-wrapper">
-
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-1-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-2-hall-1-mobile.jpg" srcset="./images/review/picture-1-hall-1.jpg"
-									alt="фото первого залла" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-2-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-2-hall-1-mobile.jpg" srcset="./images/review/picture-2-hall-1.jpg"
-									alt="фото первого залла" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-3-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-3-hall-1-mobile.jpg" srcset="./images/review/picture-3-hall-1.jpg" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-4-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-4-hall-1-mobile.jpg" srcset="./images/review/picture-4-hall-1.jpg" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-5-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-5-hall-1-mobile.jpg" srcset="./images/review/picture-5-hall-1.jpg" />
-							</picture>
-						</div>
-						<div class="swiper-slide">
-							<picture class="swiper-slide__image-wrapper">
-								<source srcset="images/review/picture-6-hall-1.jpg" media="(max-width: 767px)">
-								<img src="./images/review/picture-6-hall-1-mobile.jpg" srcset="./images/review/picture-6-hall-1.jpg" />
-							</picture>
-						</div>
-
-					</div>
-
+				<div class="swiper preview-swiper">
+					<div class="swiper-wrapper"></div>
 				</div>
 			</div>
 
@@ -308,9 +240,9 @@
 								<use xlink:href="./images/icons/sprite-icons.svg#hall-name-icon"></use>
 							</svg>
 						</div>
-						<spam class="list-description__text" id="hall-name">
+						<span class="list-description__text" id="hall-name">
 							&#8470;&nbsp;1
-						</spam>
+						</span>
 					</li>
 					<li class="list-description__item">
 						<div class="list-description__image-wrapper">
@@ -318,9 +250,9 @@
 								<use xlink:href="./images/icons/sprite-icons.svg#hall-size-icon"></use>
 							</svg>
 						</div>
-						<spam class="list-description__text" id="hall-size">
+						<span class="list-description__text" id="hall-size">
 							40&nbsp;м2
-						</spam>
+						</span>
 					</li>
 					<li class="list-description__item">
 						<div class="list-description__image-wrapper">
@@ -328,9 +260,9 @@
 								<use xlink:href="./images/icons/sprite-icons.svg#hall-capacity-icon"></use>
 							</svg>
 						</div>
-						<spam class="list-description__text" id="hall-capacity">
+						<span class="list-description__text" id="hall-capacity">
 							до&nbsp;20-ти человек
-						</spam>
+						</span>
 					</li>
 				</ul>
 
@@ -348,7 +280,8 @@
 					</div>
 				</div>
 
-				<a class="preview__button btn" href="#!">Забронировать</a>
+				<a class="preview__button btn" href="#steps-reservation"
+					aria-label="Перейти к инструкции по бронированию">Забронировать</a>
 			</div>
 		</section>
 
@@ -462,10 +395,10 @@
 				</div>
 				<div class="advantages__right-wrp">
 					<picture class="advantages__image-wrapper">
-						<source srcset="./images/advantages/microphone.png, ./images/advantages/microphone@2x.png 2x"
+						<source srcset="./images/advantages/microphone.webp, ./images/advantages/microphone@2x.webp 2x"
 							media="(min-width: 1280px)">
-						<img class="advantages__image" src="./images/advantages/microphone-mobile.png"
-							srcset="./images/advantages/microphone-mobile@2x.png 2x" alt="Микрофон">
+						<img class="advantages__image" src="./images/advantages/microphone-mobile.webp"
+							srcset="./images/advantages/microphone-mobile@2x.webp 2x" alt="Микрофон">
 					</picture>
 
 					<a class="advantages__button btn" href="#!">Забронировать зал</a>
@@ -473,7 +406,7 @@
 			</div>
 		</section>
 
-		<section class="steps-reservation">
+		<section class="steps-reservation" id="steps-reservation">
 			<div class="center">
 				<div class="decor-background"></div>
 				<div class="steps-reservation__heading">
@@ -506,7 +439,7 @@
 						<div class="swiper-slide steps-reservation__item reservation-step">
 							<span class="reservation-step__counter slide-counter">1</span>
 							<div class="reservation-step__image-wrapper reservation-step__image-wrapper--active">
-								<img class="reservation-step__image" src="./images/steps-reservation/step-1.png" alt="Шаг 1">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-1.webp" alt="Шаг 1">
 							</div>
 
 							<div class="reservation-step__description">
@@ -525,7 +458,7 @@
 						<div class="swiper-slide steps-reservation__item reservation-step">
 							<span class="reservation-step__counter slide-counter"></span>
 							<div class="reservation-step__image-wrapper">
-								<img class="reservation-step__image" src="./images/steps-reservation/step-2.png" alt="Шаг 2">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-2.webp" alt="Шаг 2">
 							</div>
 
 							<div class="reservation-step__description">
@@ -543,7 +476,7 @@
 						<div class="swiper-slide steps-reservation__item reservation-step">
 							<span class="reservation-step__counter slide-counter"></span>
 							<div class="reservation-step__image-wrapper">
-								<img class="reservation-step__image" src="./images/steps-reservation/step-3.png" alt="Шаг 3">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-3.webp" alt="Шаг 3">
 							</div>
 
 							<div class="reservation-step__description">
@@ -560,7 +493,7 @@
 						<div class="swiper-slide steps-reservation__item reservation-step">
 							<span class="reservation-step__counter slide-counter"></span>
 							<div class="reservation-step__image-wrapper">
-								<img class="reservation-step__image" src="./images/steps-reservation/step-4.png" alt="Шаг 4">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-4.webp" alt="Шаг 4">
 							</div>
 
 							<div class="reservation-step__description">
@@ -577,7 +510,7 @@
 						<div class="swiper-slide steps-reservation__item reservation-step">
 							<span class="reservation-step__counter slide-counter"></span>
 							<div class="reservation-step__image-wrapper">
-								<img class="reservation-step__image" src="./images/steps-reservation/step-5.png" alt="Шаг 5">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-5.webp" alt="Шаг 5">
 							</div>
 
 							<div class="reservation-step__description">
@@ -594,7 +527,7 @@
 						<div class="swiper-slide steps-reservation__item reservation-step">
 							<span class="reservation-step__counter slide-counter"></span>
 							<div class="reservation-step__image-wrapper">
-								<img class="reservation-step__image" src="./images/steps-reservation/step-6.png" alt="Шаг 6">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-6.webp" alt="Шаг 6">
 							</div>
 
 							<div class="reservation-step__description">
@@ -603,17 +536,63 @@
 								</svg>
 
 								<p class="reservation-step__description-text">
-									Перейти в&nbsp;чат-бот
-									<a class="reservation-step__description-link" href="https://telegram.org/"
-										target="_blank">fh_harizma_bot</a>
+									Выбрать зал
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-7.webp" alt="Шаг 6">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--door iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#phone"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Оставить номер телефона
+								</p>
+							</div>
+						</div>
+
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-8.webp" alt="Шаг 6">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--door iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#chat"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Имя, комментарий (при необходимости) и&nbsp;подтвердить бронь
+								</p>
+							</div>
+						</div>
+
+						<div class="swiper-slide steps-reservation__item reservation-step">
+							<span class="reservation-step__counter slide-counter"></span>
+							<div class="reservation-step__image-wrapper">
+								<img class="reservation-step__image" src="./images/steps-reservation/step-9.webp" alt="Шаг 6">
+							</div>
+
+							<div class="reservation-step__description">
+								<svg class="reservation-step__description-image reservation-step__description-image--door iron-image">
+									<use xlink:href="./images/icons/sprite-icons.svg#champagne"></use>
+								</svg>
+
+								<p class="reservation-step__description-text">
+									Прийти в&nbsp;харизму и&nbsp;хорошо провести время ;)
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-
-
 			</div>
 		</section>
 
@@ -627,12 +606,15 @@
 					</p>
 				</div>
 
-				<ul class="faq__accordion faq-accordion" id="accordion">
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">Какое у&nbsp;вас караоке?</h3>
-						</div>
-						<div class="faq-accordion__answer">
+				<dl class="faq__accordion faq-accordion" id="accordion">
+					<div>
+						<dt class="faq-accordion__question">
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="false" aria-controls="answer1">
+									Какое у&nbsp;вас караоке?</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer1">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -644,16 +626,18 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
+						</dd>
+					</div>
 
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">
-								Есть&nbsp;ли у&nbsp;вас английские песни?
-							</h3>
-						</div>
-						<div class="faq-accordion__answer">
+					<div>
+						<dt class="faq-accordion__question">
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="true" aria-controls="answer2">
+									Есть&nbsp;ли у&nbsp;вас английские песни?
+								</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer2">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -665,16 +649,18 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
+						</dd>
+					</div>
 
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">
-								Можно&nbsp;ли подключить телефон?
-							</h3>
-						</div>
-						<div class="faq-accordion__answer">
+					<div>
+						<dt class="faq-accordion__question">
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="false" aria-controls="answer3">
+									Можно&nbsp;ли подключить телефон?
+								</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer3">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -686,16 +672,19 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
+						</dd>
+					</div>
 
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">
-								Сколько микрофонов в&nbsp;каждом зале?
-							</h3>
-						</div>
-						<div class="faq-accordion__answer">
+					<div>
+						<dt class="faq-accordion__question">
+
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="false" aria-controls="answer4">
+									Сколько микрофонов в&nbsp;каждом зале?
+								</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer4">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -707,16 +696,18 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
+						</dd>
+					</div>
 
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">
-								Есть&nbsp;ли оплата картой?
-							</h3>
-						</div>
-						<div class="faq-accordion__answer">
+					<div>
+						<dt class="faq-accordion__question">
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="false" aria-controls="answer5">
+									Есть&nbsp;ли оплата картой?
+								</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer5">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -728,16 +719,18 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
+						</dd>
+					</div>
 
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">
-								Можно приность с&nbsp;собой алкоголь и&nbsp;еду?
-							</h3>
-						</div>
-						<div class="faq-accordion__answer">
+					<div>
+						<dt class="faq-accordion__question">
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="false" aria-controls="answer6">
+									Можно приность с&nbsp;собой алкоголь и&nbsp;еду?
+								</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer6">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -749,16 +742,18 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
+						</dd>
+					</div>
 
-					<li>
-						<div class="faq-accordion__question">
-							<h3 class="faq-accordion__question-text">
-								Как расчитывается стоимость?
-							</h3>
-						</div>
-						<div class="faq-accordion__answer">
+					<div>
+						<dt class="faq-accordion__question">
+							<p class="faq-accordion__question-text">
+								<button class="faq-accordion__question-button" aria-expanded="false" aria-controls="answer7">
+									Как расчитывается стоимость?
+								</button>
+							</p>
+						</dt>
+						<dd class="faq-accordion__answer" id="answer7">
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;50,000 студийных фонограмм. Из&nbsp;них 80%&nbsp;&mdash; оригинальные минусовки
 								в&nbsp;качестве
@@ -770,23 +765,27 @@
 							<p class="faq-accordion__answer-text">
 								Более&nbsp;10,000 специальных фонограмм в&nbsp;сопровождении оригинальных видеоклипов.
 							</p>
-						</div>
-					</li>
-				</ul>
+						</dd>
+					</div>
+				</dl>
 
-				<div class="faq__additional-info faq-info">
+				<aside class="faq__additional-info faq-info">
 					<p class="faq-info__text">
 						В&nbsp;нашем заведении Бельгийский ковролин. На входе&nbsp;выдают <span
 							class="faq-info__text--color">индивидуально запакованные тапочки,</span>
 						в&nbsp;которые необходимо переобуться.
 					</p>
 
-					<img class="faq-info__image" src="./images/faq/slippers.png" srcset="./images/faq/slippers@2x.png 2x"
-						alt="Тапки">
+					<figure class="faq-info__image-wrapper">
+						<img class="faq-info__image" src="./images/faq/slippers.webp" srcset="./images/faq/slippers@2x.webp 2x"
+							alt="Тапки">
+						<figcaption class="faq-info__image-label">Наши тапочки</figcaption>
+					</figure>
 
-					<a class="faq__button btn" href="#!">Забронировать зал</a>
-				</div>
-
+					<a class="faq__button btn" href="#steps-reservation" aria-label="Перейти к инструкции по бронированию">
+						Забронировать зал
+					</a>
+				</aside>
 			</div>
 		</section>
 
@@ -794,60 +793,69 @@
 
 	<footer class="footer">
 		<div class="center">
+			<div class="decor-background"></div>
 			<nav class="footer__nav nav">
 				<ul class="footer__nav-list">
 					<li class="footer__nav-item footer__nav-item--logo">
 						<div class="logo footer__logo">
-							<a class="logo__link" href="index.html">
+							<a class="logo__link" href="index.html" aria-label="Вернуться на главную страницу">
 								<img class="logo__image" src="./images/icons/logo.svg" alt="Логотип караоке бара">
 							</a>
 						</div>
 					</li>
 					<li class="footer__nav-item footer__nav-item--link">
-						<a class="nav__link nav__link--footer" href="tel:380979709090" target="_blank">
-							<div class="nav__link-image-wrapper">
-								<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
-									<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
-								</svg>
-							</div>
-							<span class="nav__link-text">+38 (097) 970-90-90</span>
-						</a>
+						<address>
+							<a class="nav__link nav__link--footer" href="tel:380979709090" target="_blank"
+								aria-label="Позвонить в бар">
+								<div class="nav__link-image-wrapper">
+									<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
+										<use xlink:href="./images/icons/sprite-icons.svg#nav-phone"></use>
+									</svg>
+								</div>
+								<span class="nav__link-text">+38 (097) 970-90-90</span>
+							</a>
+						</address>
 					</li>
 					<li class="footer__nav-item footer__nav-item--link footer__nav-item--display">
-						<a class="nav__link nav__link--footer" href="!#" target="_blank">
+						<div class="nav__link nav__link--footer nav__link--no-hover">
 							<div class="nav__link-image-wrapper">
 								<svg class="nav__link-image nav__link-image--tel" viewBox="0 0 27 27">
 									<use xlink:href="./images/icons/sprite-icons.svg#nav-calendar"></use>
 								</svg>
 							</div>
 							<span class="nav__link-text">Пн&nbsp;&mdash; Вс&nbsp;круглосуточно</span>
-						</a>
+						</div>
 					</li>
 					<li class="footer__nav-item footer__nav-item--link">
-						<a class="nav__link nav__link--footer" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank">
-							<div class="nav__link-image-wrapper">
-								<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
-									<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
-								</svg>
-							</div>
-							<span class="nav__link-text nav__link-text--display_color">м. Лубянка
-								<span>, ул. Сретенский переулок, 4</span>
-							</span>
-						</a>
+						<address>
+							<a class="nav__link nav__link--footer" href="https://maps.app.goo.gl/p6pz5EvZV3BvuRBz8" target="_blank"
+								aria-label="Посмотреть карту с адресом">
+								<div class="nav__link-image-wrapper">
+									<svg class="nav__link-image nav__link-image--map" viewBox="0 0 20 30">
+										<use xlink:href="./images/icons/sprite-icons.svg#nav-map"></use>
+									</svg>
+								</div>
+								<span class="nav__link-text nav__link-text--display_color">м. Лубянка
+									<span>, ул. Сретенский переулок, 4</span>
+								</span>
+							</a>
+						</address>
 					</li>
 					<li class="footer__nav-item footer__nav-item--button">
-						<a class="nav__btn nav__btn--border-color nav__btn--footer" href="#!">Построить маршрут</a>
+						<a class="nav__btn nav__btn--border-color nav__btn--footer" href="#!"
+							aria-label="Построить маршрут до бара">Построить маршрут</a>
 					</li>
 					<li class="footer__nav-item footer__nav-item--buttons-group">
 						<div class="nav__buttons-wrapper nav__buttons-wrapper--mobile nav__buttons-wrapper--mobile-footer">
-							<a class="nav__btn" href="#!">Наши залы</a>
-							<a class="nav__btn nav__btn--bg-color" href="#!">Забронировать</a>
+							<a class="nav__btn" href="#preview" aria-label="Посмотреть на наши заллы">Наши залы</a>
+							<a class="nav__btn nav__btn--bg-color" href="#steps-reservation"
+								aria-label="Забронировать залл">Забронировать</a>
 						</div>
 					</li>
 				</ul>
 			</nav>
 
-			<a class="footer__btn footer__btn--rotate" href="index.html">
+			<a class="footer__btn footer__btn--rotate" href="index.html" aria-label="Вернуться на верх страницы">
 				<span class="footer__btn-text">Подняться&nbsp;вверх</span>
 				<div class="footer__btn-image-wrapper">
 					<svg class="footer__btn-image footer__btn-image--rotate" viewBox="0 0 27 27">
@@ -861,7 +869,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
-	<script type="module" src="js/main.js"></script>
+	<script type="module" src="js/main.min.js"></script>
 </body>
 
 </html>

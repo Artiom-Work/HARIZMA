@@ -2,7 +2,7 @@
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  border-bottom: 1px dashed #313339;
+  border-bottom: 1px dashed $color-page-lines;
   @media (max-width: 1040px) {
     border-bottom: none;
   }
@@ -14,7 +14,7 @@
       min-height: 103px;
     }
     @media (max-width: 850px) {
-      grid-template: auto/ repeat(2, 1fr);
+      grid-template: auto / repeat(2, 1fr);
     }
   }
   &__item {

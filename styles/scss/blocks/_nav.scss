@@ -9,18 +9,20 @@
     align-items: center;
     gap: 17px;
     @include hover {
-      color: $color-accent;
-      transform: scale(1.02);
-      .nav__link-image-wrapper {
-        background: $color-accent;
-        transition: all 0.4s ease 0s;
+      &:not(.nav__link--no-hover) {
+        color: $color-accent;
+        transform: scale(1.02);
+        .nav__link-image-wrapper {
+          background: $color-accent;
+          transition: all 0.4s ease 0s;
+        }
       }
     }
     @include active {
       transform: scale(0.98);
     }
     &--desc {
-      @media (max-width: 1100px) {
+      @media (max-width: 778px) {
         display: none;
       }
     }
@@ -45,7 +47,7 @@
       background: $bg-icons-light;
       @include flexCenter;
       &--mobile {
-        @media (max-width: 768px) {
+        @media (max-width: 778px) {
           width: 51px;
           height: 51px;
         }
@@ -81,7 +83,7 @@
         color: $color-accent;
       }
       &--desc {
-        @media (max-width: 900px) {
+        @media (max-width: 778px) {
           display: none;
         }
       }
@@ -101,14 +103,14 @@
     align-items: center;
     gap: 24px;
     &--desc {
-      @media (max-width: 768px) {
+      @media (max-width: 1150px) {
         display: none;
       }
     }
     &--mobile {
       display: none;
       margin: 19px 0 0;
-      @media (max-width: 768px) {
+      @media (max-width: 1150px) {
         display: flex;
         flex-direction: column;
         align-items: flex-start;

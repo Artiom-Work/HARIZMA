@@ -3,8 +3,10 @@ $color-light: #fff;
 $color-medium: #606571;
 $color-accent: #f69020;
 $color-accent-light: #ffc619;
-
 $color-border: #393c43;
+
+$color-page-lines: #313339;
+$color-page-lines-accent: #ffc6194d;
 
 $dark-bg: #131517;
 $main-bg: #191b20;
@@ -17,35 +19,6 @@ $bg-cards-dark-secondary-hover: #343740;
 
 $text-color-description: #c5c5c5;
 $btn-text-color-dark: #252121;
-
-$bg-center-lines: linear-gradient(
-  90deg,
-  transparent 0%,
-  transparent 11.5%,
-  #313339 1px,
-  transparent 11.6%,
-  transparent 37.2%,
-  #313339 1px,
-  transparent 37.35%,
-  transparent 63.01%,
-  #313339 1px,
-  transparent 63.15%,
-  transparent 88.7%,
-  #313339 1px,
-  transparent 88.82%,
-  transparent 100%
-);
-$bg-center-lines-mobile: linear-gradient(
-  90deg,
-  transparent 0%,
-  transparent 18.5%,
-  #313339 1px,
-  transparent 18.8%,
-  transparent 83.7%,
-  #313339 1px,
-  transparent 83.82%,
-  transparent 100%
-);
 
 $accent-btn-bg-main: linear-gradient(
   141deg,
@@ -79,4 +52,4 @@ $main-font-black: "muller-black", sans-serif;
   }
 }
 // paths
-$image-path: "../../images";
+// $image-path: "../../images";

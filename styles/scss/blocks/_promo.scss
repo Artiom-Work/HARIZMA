@@ -19,8 +19,8 @@
       position: absolute;
       content: "";
       width: 26.2%;
-      border-right: 1px solid #313339;
-      border-left: 1px solid #313339;
+      border-right: 1px solid $color-page-lines;
+      border-left: 1px solid $color-page-lines;
       min-height: 733px;
       bottom: 0;
       left: 10.65%;
@@ -35,7 +35,7 @@
       }
       @media (max-width: 1040px) {
         width: 11.6%;
-        border-right: 1px solid #313339;
+        border-right: 1px solid $color-page-lines;
         min-height: 100%;
         top: 0px;
         left: 0;
@@ -50,7 +50,7 @@
         position: absolute;
         content: "";
         width: 4.4%;
-        border-left: 1px solid #313339;
+        border-left: 1px solid $color-page-lines;
         min-height: 32%;
         top: 0;
         right: 11.7%;
@@ -176,8 +176,8 @@
       height: 46px;
       top: -2px;
       left: 0;
-      background: url(../../../images/icons/promo-advantages-icon.svg) no-repeat
-        center / cover;
+      background: url(/images/icons/promo-advantages-icon.svg) no-repeat center /
+        cover;
       @media (max-width: 768px) {
         width: 36.35px;
         height: 36.35px;
@@ -246,7 +246,7 @@
       position: absolute;
       width: 269px;
       height: 273px;
-      background: url(../../images/promo/around-the-clock.png) no-repeat center -32px /
+      background: url(../../images/promo/around-the-clock.webp) no-repeat center -32px /
         138%;
       top: 546px;
       right: 708px;
@@ -267,7 +267,7 @@
         top: 399px;
         width: 246px;
         bottom: 34px;
-        background: url(../../images/promo/around-the-clock-360.png) no-repeat
+        background: url(../../images/promo/around-the-clock-360.webp) no-repeat
           center / cover;
       }
       @media (max-width: 560px) {
@@ -299,49 +299,55 @@
       bottom: 0;
     }
   }
-
-  &__link {
+}
+.promo-link {
+  transition: all 0.4s ease 0s;
+  position: absolute;
+  bottom: 131px;
+  right: 60px;
+  transform: rotate(-90deg);
+  z-index: 1;
+  @include flexCenterSpaceBetwen;
+  max-width: 239px;
+  width: 100%;
+  min-height: 83px;
+  @media (max-width: 1815px) {
+    bottom: unset;
+    top: 180px;
+  }
+  @media (max-width: 1560px) {
+    right: -40px;
+    top: unset;
+    bottom: 131px;
+  }
+  @media (max-width: 1040px) {
+    display: none;
+  }
+  @include hover {
+    filter: brightness(60%);
+  }
+  @include active {
+    filter: brightness(120%);
+  }
+  &__text {
     font-family: $main-font-bold;
     font-size: 9px;
     line-height: 100%;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: $color-accent;
+  }
+  &__image {
+    fill: #2c383f;
+    width: 29px;
+    height: 29px;
     &-wrapper {
-      position: absolute;
-      bottom: 131px;
-      right: 60px;
-      transform: rotate(-90deg);
-      z-index: 1;
-      @include flexCenterSpaceBetwen;
-      max-width: 239px;
-      width: 100%;
-      min-height: 83px;
-      @media (max-width: 1815px) {
-        bottom: unset;
-        top: 180px;
-      }
-      @media (max-width: 1560px) {
-        right: -40px;
-        top: unset;
-        bottom: 131px;
-      }
-      @media (max-width: 1040px) {
-        display: none;
-      }
-    }
-    &-image {
-      fill: #2c383f;
-      width: 29px;
-      height: 29px;
-      &-wrapper {
-        transform: rotate(90deg);
-        @include flexCenter;
-        width: 83px;
-        height: 83px;
-        border-radius: 100%;
-        background: $accent-btn-bg-secondary;
-      }
+      transform: rotate(90deg);
+      @include flexCenter;
+      width: 83px;
+      height: 83px;
+      border-radius: 100%;
+      background: $accent-btn-bg-secondary;
     }
   }
 }

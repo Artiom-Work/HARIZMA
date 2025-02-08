@@ -1,7 +1,7 @@
 .header {
   min-height: 139px;
   background: $main-bg;
-  border-bottom: 1px dashed #313339;
+  border-bottom: 1px dashed $color-page-lines;
   @media (max-width: 1040px) {
     border-bottom: none;
   }
@@ -10,20 +10,10 @@
     min-height: 79px;
   }
   .center {
+    position: relative;
     padding: 40px 50px 28px 41px;
     @include flexCenterSpaceBetwen;
     gap: 30px;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      transparent 37.2%,
-      #313339 1px,
-      transparent 37.35%,
-      transparent 100%
-    );
-    @media (max-width: 1875px) {
-      background: transparent;
-    }
     @media (max-width: 1400px) {
       padding: 40px 22px 28px 12px;
     }
@@ -32,6 +22,20 @@
     }
     @media (max-width: 768px) {
       padding: 18px 29px 9px 12px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 36.8%;
+      border-right: 1px solid $color-page-lines;
+      min-height: 100%;
+      bottom: 0;
+      left: 0;
+      background: transparent;
+      z-index: 0;
+      @media (max-width: 1920px) {
+        display: none;
+      }
     }
   }
   &__logo {
@@ -51,8 +55,9 @@
     align-items: end;
     justify-content: space-between;
     gap: 30px;
-    @media (max-width: 1100px) {
+    @media (max-width: 1150px) {
       justify-content: flex-end;
+      min-height: 60px;
     }
     @media (max-width: 768px) {
       min-height: 51px;

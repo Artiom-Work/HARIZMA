@@ -1,7 +1,7 @@
 // connecting main css files
-@import "normolize.css";
-@import "nulling-styles.css";
-@import "fonts.css";
+@import "_normilize.scss";
+@import "_nulling-styles.scss";
+@import "../fonts.css";
 // connecting scss files
 @import "_variables.scss";
 @import "_mixins.scss";
@@ -18,4 +18,5 @@
 @import "./blocks/advantages.scss";
 @import "./blocks/steps-reservation.scss";
 @import "./blocks/faq.scss";
+@import "./blocks/accordion.scss";
 @import "./blocks/footer.scss";

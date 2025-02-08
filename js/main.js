@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	const userAgent = navigator.userAgent.toLowerCase();
 	const isIron = userAgent.includes('iron');
 
-
 	if (isIron) {
 		const svgIcons = document.querySelectorAll('.iron-image');
 		const additionToHref = '-iron';
@@ -55,52 +54,158 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // For block preview (slider)
+import { imagesForHall1, imagesForHall2, imagesForHall3, imagesForHall5 } from "./data.js";
+import { descriptionForHall1, descriptionForHall2, descriptionForHall3, descriptionForHall5 } from "./data.js";
+const imagesHall1 = JSON.parse(imagesForHall1);
+const imagesHall2 = JSON.parse(imagesForHall2);
+const imagesHall3 = JSON.parse(imagesForHall3);
+const imagesHall5 = JSON.parse(imagesForHall5);
+const descriptionHall1 = JSON.parse(descriptionForHall1);
+const descriptionHall2 = JSON.parse(descriptionForHall2);
+const descriptionHall3 = JSON.parse(descriptionForHall3);
+const descriptionHall5 = JSON.parse(descriptionForHall5);
+const hallsButtons = document.querySelectorAll('.preview__list-button');
+const descriptionHallElements = document.querySelectorAll('.list-description__text');
+const previewSliderBox = document.querySelector('.preview-swiper2').querySelector('.swiper-wrapper');
+const previewSlider2Box = document.querySelector('.preview-swiper').querySelector('.swiper-wrapper');
 
-const swiper = new Swiper(".preview-swiper", {
-	spaceBetween: 0,
-	slidesPerView: 5,
-	freeMode: true,
-	watchSlidesProgress: true,
-	breakpoints: {
-		1500: {
-			slidesPerView: 5,
+let swiper;
+let swiper2;
+
+
+function initSwiper(images) {
+
+	if (swiper) {
+		swiper.destroy();
+		swiper = undefined;
+	}
+	if (swiper2) {
+		swiper2.destroy();
+		swiper2 = undefined;
+	}
+
+	previewSliderBox.innerHTML = '';
+	previewSlider2Box.innerHTML = '';
+
+	createSlide(images, previewSlider2Box);
+	createSlide(images, previewSliderBox);
+
+	swiper = new Swiper(".preview-swiper", {
+		spaceBetween: 0,
+		slidesPerView: 5,
+		freeMode: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			1500: {
+				slidesPerView: 5,
+			},
+			1280: {
+				slidesPerView: 4,
+			},
+			1000: {
+				slidesPerView: 5,
+			},
+			768: {
+				slidesPerView: 4,
+			}
 		},
-		1280: {
-			slidesPerView: 4,
+	});
+
+	swiper2 = new Swiper(".preview-swiper2", {
+		spaceBetween: 10,
+		thumbs: {
+			swiper: swiper,
 		},
-		1000: {
-			slidesPerView: 5,
+		pagination: {
+			el: ".preview__slider-pagination",
+			type: "fraction",
 		},
-		768: {
-			slidesPerView: 4,
+		navigation: {
+			nextEl: ".preview__slider-button--next",
+			prevEl: ".preview__slider-button--prev",
+		},
+	});
+};
+
+initSwiper(imagesHall1);
+
+hallsButtons.forEach(btn => {
+	btn.addEventListener('click', function (e) {
+		offHallsButton();
+		onHallButton(btn);
+
+		let selectedImages;
+		switch (btn.id) {
+			case 'hall1':
+				selectedImages = imagesHall1;
+				descriptionHallUpdate(descriptionHall1);
+				break;
+			case 'hall2':
+				selectedImages = imagesHall2;
+				descriptionHallUpdate(descriptionHall2);
+				break;
+			case 'hall3':
+				selectedImages = imagesHall3;
+				descriptionHallUpdate(descriptionHall3);
+				break;
+			case 'hall5':
+				selectedImages = imagesHall5;
+				descriptionHallUpdate(descriptionHall5);
+				break;
+			default:
+				selectedImages = imagesHall1;
 		}
-	},
-});
-const swiper2 = new Swiper(".preview-swiper2", {
-	spaceBetween: 10,
-	thumbs: {
-		swiper: swiper,
-	},
-	pagination: {
-		el: ".preview__slider-pagination",
-		type: "fraction",
-	},
-	navigation: {
-		nextEl: ".preview__slider-button--next",
-		prevEl: ".preview__slider-button--prev",
-	},
+
+		initSwiper(selectedImages);
+	});
 });
 
+function offHallsButton() {
+	hallsButtons.forEach(btn => {
+		btn.classList.remove('preview__list-button--active');
+	});
+}
+function onHallButton(btn) {
+	btn.classList.add('preview__list-button--active');
+}
+function descriptionHallUpdate(descriptionHall) {
+	let { number, size, capacity } = descriptionHall[0];
+	descriptionHallElements.forEach(elem => {
+		if (elem && elem.id === 'hall-name') {
+			elem.innerHTML = number;
+		}
+		if (elem && elem.id === 'hall-size') {
+			elem.innerHTML = size;
+		}
+		if (elem && elem.id === 'hall-capacity') {
+			elem.innerHTML = capacity;
+		}
+	});
+}
+
+function createSlide(images, sliderBox) {
+	images.forEach(({ path, pathMobile, alt }) => {
+		const slide = `
+						<div class="swiper-slide">
+							<picture class="swiper-slide__image-wrapper">
+								<source srcset="${path}" media="(max-width: 767px)">
+								<img src="${pathMobile}" srcset="${path}"
+									alt="${alt}" />
+							</picture>
+						</div>
+	`;
+		sliderBox.insertAdjacentHTML('beforeend', slide);
+	});
+}
 // For block steps-reservation (slider)
-
 const mediaQuery = window.matchMedia('(max-width: 1280px)');
 let tablet = true;
 function handleMediaChange(e) {
 	tablet = e.matches
 }
-// Вызываем функцию при инициализации
+
 handleMediaChange(mediaQuery);
-// Добавляем слушатель для изменения состояния медиазапроса
+
 mediaQuery.addEventListener('change', handleMediaChange);
 
 const swiper3 = new Swiper(".steps-reservation__slider", {
@@ -123,18 +228,15 @@ const swiper3 = new Swiper(".steps-reservation__slider", {
 	},
 	on: {
 		init: function () {
-			updateSlideOpacity(this); // Устанавливаем начальную прозрачность
+			updateSlideOpacity(this);
 		},
 		slideChange: function () {
-			updateSlideOpacity(this); // Обновляем прозрачность при смене слайда
-			// Получаем все слайды внутри слайдера
+			updateSlideOpacity(this);
+			const slides = this.slides;
 
-			const slides = this.slides; // Используем `this.slides`, чтобы получить доступ к слайдам
-
-			// Удаляем класс у всех слайдов
 			slides.forEach(slide => {
 				const slideImageFrame = slide.querySelector('.reservation-step__image-wrapper');
-				if (slideImageFrame) { // Проверяем, существует ли элемент
+				if (slideImageFrame) {
 					slideImageFrame.classList.remove('reservation-step__image-wrapper--active');
 				}
 				const counter = slide.querySelector('.slide-counter');
@@ -143,24 +245,22 @@ const swiper3 = new Swiper(".steps-reservation__slider", {
 				}
 			});
 
-			// Находим активный слайд
 			const activeSlide = slides[this.activeIndex];
 			const slideImageFrame = activeSlide.querySelector('.reservation-step__image-wrapper');
 
-			// Добавляем класс к активному слайду
-			if (slideImageFrame) { // Проверяем, существует ли элемент
+			if (slideImageFrame) {
 				slideImageFrame.classList.add('reservation-step__image-wrapper--active');
 			}
-			// Обновляем и показываем счётчик на активном слайде
+
 			const activeCounter = activeSlide.querySelector('.slide-counter');
 			if (activeCounter) {
-				activeCounter.textContent = `${this.activeIndex + 1}`; // Обновляем текст счётчика
-				activeCounter.style.display = 'block'; // Показываем счётчик
+				activeCounter.textContent = `${this.activeIndex + 1}`;
+				activeCounter.style.display = 'block';
 			}
 		}
 	}
 });
-// Функция для обновления прозрачности слайдов
+
 function updateSlideOpacity(swiper) {
 	if (tablet) {
 		newSlideOpacityModile(swiper);
@@ -172,16 +272,15 @@ function updateSlideOpacity(swiper) {
 		const slides = swiper.slides;
 
 		slides.forEach((slide, index) => {
-			slide.classList.remove('opacity-100', 'opacity-50', 'opacity-20'); // Удаляем все классы
-
+			slide.classList.remove('opacity-100', 'opacity-50', 'opacity-20');
 			if (index === swiper.activeIndex) {
-				slide.classList.add('opacity-100'); // Активный слайд
+				slide.classList.add('opacity-100');
 			} else if (index === swiper.activeIndex - 1 || index === swiper.activeIndex + 1) {
-				slide.classList.add('opacity-100'); // Предыдущий и следующий слайды
+				slide.classList.add('opacity-100');
 			} else if (index === swiper.activeIndex + 2 || index === swiper.activeIndex - 2) {
-				slide.classList.add('opacity-50'); // Слайды дальше от активного
+				slide.classList.add('opacity-50');
 			} else if (index > swiper.activeIndex + 2 || index < swiper.activeIndex - 2) {
-				slide.classList.add('opacity-20'); // Остальные слайды
+				slide.classList.add('opacity-20');
 			}
 		});
 	}
@@ -190,17 +289,16 @@ function updateSlideOpacity(swiper) {
 		const slides = swiper.slides;
 
 		slides.forEach((slide, index) => {
-			slide.classList.remove('opacity-100', 'opacity-50', 'opacity-20'); // Удаляем все классы
+			slide.classList.remove('opacity-100', 'opacity-50', 'opacity-20');
 			slide.classList.add('max-width-mobile');
 			if (index === swiper.activeIndex) {
-				slide.classList.add('opacity-100'); // Активный слайд
+				slide.classList.add('opacity-100');
 			} else if (index >= swiper.activeIndex - 1 || index <= swiper.activeIndex + 1) {
-				slide.classList.add('opacity-50'); // Предыдущий и следующий слайды
+				slide.classList.add('opacity-50');
 			}
 		});
 	}
 }
-
 
 // Changing the content of the block with pagination for sliders 1, 2 and 3
 const sliderPagination = document.querySelectorAll('.slider-pagination');
@@ -210,12 +308,11 @@ sliderPagination.forEach(function (e) {
 	e.innerHTML = paginationText;
 });
 
-
 // For section faq
-
 $(function () {
 	$("#accordion").accordion({
 		active: 0,
-		collapsible: true
+		collapsible: true,
+		header: "dt"
 	});
 });

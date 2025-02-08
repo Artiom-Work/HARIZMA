@@ -21,7 +21,7 @@
     position: absolute;
     content: "";
     width: 8.58%;
-    border-right: 1px solid #ffc6194d;
+    border-right: 1px solid $color-page-lines-accent;
     min-height: 100%;
     bottom: 0;
     left: 0;
@@ -139,12 +139,12 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: url(../../../images/icons/icon-eye.svg) no-repeat center
-              48% / 18%,
+          background: url(../../images/icons/icon-eye.svg) no-repeat center 48% /
+              18%,
             transparentize($color: $color-accent-light, $amount: 0.6);
           z-index: 1;
           @media (max-width: 768px) {
-            background: url(../../../images/icons/icon-eye.svg) no-repeat center
+            background: url(../../images/icons/icon-eye.svg) no-repeat center
                 55%/ 43%,
               transparentize($color: $color-accent-light, $amount: 0.6);
           }
@@ -164,7 +164,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url(../../../images/icons/icon-eye.svg) no-repeat center
+            background: url(../../images/icons/icon-eye.svg) no-repeat center
                 48% / 18%,
               transparentize($color: $color-accent-light, $amount: 0.6);
           }
@@ -238,8 +238,6 @@
   min-height: 15px;
   @include flexCenterSpaceBetwen;
   flex-wrap: wrap;
-  // &-item {
-  // }
   @media (max-width: 1280px) {
     max-width: 615px;
   }
@@ -248,15 +246,18 @@
     column-gap: 42px;
   }
   &-button {
+    transition: all 0.4s ease 0s;
     font-family: $main-font-bold;
     font-size: 15px;
     line-height: 100%;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: $color-accent-light;
     color: $color-medium;
     background: transparent;
     cursor: pointer;
+    &--active {
+      color: $color-accent-light;
+    }
     @media (max-width: 1280px) {
       font-size: 22px;
     }
@@ -264,8 +265,13 @@
       font-size: 15px;
       letter-spacing: 0;
     }
-    &--active {
+    @include hover {
       color: $color-accent-light;
+      transform: scale(1.05);
+    }
+    @include active {
+      color: $color-light;
+      transform: scale(0.95);
     }
   }
 }

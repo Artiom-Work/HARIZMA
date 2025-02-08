@@ -12,7 +12,7 @@
       position: absolute;
       content: "";
       width: 10.68%;
-      border-right: 1px solid #313339;
+      border-right: 1px solid $color-page-lines;
       min-height: 100%;
       bottom: 0;
       left: 0;
@@ -24,13 +24,13 @@
     }
     &::before {
       @media (min-width: 1500px) {
-        left: 52.45%;
+        left: 52.35%;
       }
     }
     &::after {
       left: unset;
       right: 0;
-      border-left: 1px solid #313339;
+      border-left: 1px solid $color-page-lines;
       border-right: none;
       @media (max-width: 768px) {
         width: 16.58%;
@@ -127,6 +127,7 @@
     width: 252px;
     height: 487px;
     height: 488.92px;
+    border-radius: 30px;
     @media (max-width: 768px) {
       width: 206.77px;
       height: 401.92px;

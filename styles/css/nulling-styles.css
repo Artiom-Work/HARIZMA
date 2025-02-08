@@ -3,10 +3,11 @@
 *::after,
 ul,
 p {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 h1,
@@ -15,36 +16,36 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: inherit;
-	font-weight: unset;
+  font-family: inherit;
+  font-weight: unset;
 }
 
 a {
-	text-decoration: none;
-	color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 img,
 label {
-	caret-color: transparent;
+  caret-color: transparent;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 input,
 button,
 textarea {
-	font-family: inherit;
-}
+  font-family: inherit;
+}/*# sourceMappingURL=nulling-styles.css.map */
