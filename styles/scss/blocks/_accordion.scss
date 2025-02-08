@@ -42,7 +42,8 @@
       background: $bg-cards-dark-third;
       &.ui-icon-triangle-1-s {
         &::before {
-          background: url(/images/icons/arrow.svg) no-repeat center / cover;
+          background: url(../../../images/icons/arrow.svg) no-repeat center /
+            cover;
         }
       }
       &::before {
@@ -52,7 +53,8 @@
         left: 11px;
         width: 20px;
         height: 13px;
-        background: url(/images/icons/arrow-accent.svg) no-repeat center / cover;
+        background: url(../../../images/icons/arrow-accent.svg) no-repeat center /
+          cover;
       }
     }
     &-button {

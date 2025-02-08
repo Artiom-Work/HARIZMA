@@ -202,9 +202,9 @@
         z-index: -2;
         box-shadow: inset 0px 0px 97px 39px $main-bg;
         background-image: image-set(
-          url("../../images/advantages/microphone-bg.webp") 1x
+          url("../../../images/advantages/microphone-bg.webp") 1x
             type("image/webp"),
-          url("../../images/advantages/microphone-bg@2x.webp") 2x
+          url("../../../images/advantages/microphone-bg@2x.webp") 2x
             type("image/webp")
         );
         background-repeat: no-repeat;
@@ -212,9 +212,9 @@
         background-size: 150%;
         @media (max-width: 1280px) {
           background-image: image-set(
-            url("../../images/advantages/microphone-bg-mobile.webp") 1x
+            url("../../../images/advantages/microphone-bg-mobile.webp") 1x
               type("image/webp"),
-            url("../../images/advantages/microphone-bg-mobile@2x.webp") 2x
+            url("../../../images/advantages/microphone-bg-mobile@2x.webp") 2x
               type("image/webp")
           );
           background-position: center;
@@ -224,9 +224,9 @@
         }
         @media (max-width: 500px) {
           background-image: image-set(
-            url("../../images/advantages/microphone-bg-mobile.webp") 1x
+            url("../../../images/advantages/microphone-bg-mobile.webp") 1x
               type("image/webp"),
-            url("../../images/advantages/microphone-bg-mobile@2x.webp") 2x
+            url("../../../images/advantages/microphone-bg-mobile@2x.webp") 2x
               type("image/webp")
           );
           background-position: left -22px top -12px;
@@ -348,8 +348,8 @@
       height: 14px;
       left: 0;
       top: 5px;
-      background: url(/images/advantages/advantage-list-item-icon.svg) no-repeat
-        center / contain;
+      background: url(../../../images/advantages/advantage-list-item-icon.svg)
+        no-repeat center / contain;
       @media (max-width: 650px) {
         top: 0;
       }

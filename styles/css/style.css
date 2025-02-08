@@ -1389,7 +1389,7 @@ address {
   height: 46px;
   top: -2px;
   left: 0;
-  background: url(/images/icons/promo-advantages-icon.svg) no-repeat center/cover;
+  background: url(../../../images/icons/promo-advantages-icon.svg) no-repeat center/cover;
 }
 @media (max-width: 768px) {
   .promo__advantages-item::before {
@@ -2552,16 +2552,16 @@ address {
   z-index: -2;
   -webkit-box-shadow: inset 0px 0px 97px 39px #191b20;
           box-shadow: inset 0px 0px 97px 39px #191b20;
-  background-image: -webkit-image-set(url("../../images/advantages/microphone-bg.webp") 1x type("image/webp"), url("../../images/advantages/microphone-bg@2x.webp") 2x type("image/webp"));
-  background-image: image-set(url("../../images/advantages/microphone-bg.webp") 1x type("image/webp"), url("../../images/advantages/microphone-bg@2x.webp") 2x type("image/webp"));
+  background-image: -webkit-image-set(url("../../../images/advantages/microphone-bg.webp") 1x type("image/webp"), url("../../../images/advantages/microphone-bg@2x.webp") 2x type("image/webp"));
+  background-image: image-set(url("../../../images/advantages/microphone-bg.webp") 1x type("image/webp"), url("../../../images/advantages/microphone-bg@2x.webp") 2x type("image/webp"));
   background-repeat: no-repeat;
   background-position: right -49px top -10px;
   background-size: 150%;
 }
 @media (max-width: 1280px) {
   .advantages__image-wrapper::before {
-    background-image: -webkit-image-set(url("../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
-    background-image: image-set(url("../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
+    background-image: -webkit-image-set(url("../../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
+    background-image: image-set(url("../../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
     background-position: center;
     background-size: cover;
     opacity: 0.38;
@@ -2571,8 +2571,8 @@ address {
 }
 @media (max-width: 500px) {
   .advantages__image-wrapper::before {
-    background-image: -webkit-image-set(url("../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
-    background-image: image-set(url("../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
+    background-image: -webkit-image-set(url("../../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
+    background-image: image-set(url("../../../images/advantages/microphone-bg-mobile.webp") 1x type("image/webp"), url("../../../images/advantages/microphone-bg-mobile@2x.webp") 2x type("image/webp"));
     background-position: left -22px top -12px;
     background-size: 160%;
     opacity: 0.72;
@@ -2714,7 +2714,7 @@ address {
   height: 14px;
   left: 0;
   top: 5px;
-  background: url(/images/advantages/advantage-list-item-icon.svg) no-repeat center/contain;
+  background: url(../../../images/advantages/advantage-list-item-icon.svg) no-repeat center/contain;
 }
 @media (max-width: 650px) {
   .advantage__description-item::before {
@@ -3118,8 +3118,8 @@ address {
   -webkit-box-shadow: inset 0px 0px 223px 140px #191b20;
           box-shadow: inset 0px 0px 223px 140px #191b20;
   z-index: -2;
-  background-image: -webkit-image-set(url(../../images/faq/faq-background.webp) 1x, url(../../images/faq/faq-background@2x.webp) 2x);
-  background-image: image-set(url(../../images/faq/faq-background.webp) 1x, url(../../images/faq/faq-background@2x.webp) 2x);
+  background-image: -webkit-image-set(url(../../../images/faq/faq-background.webp) 1x, url(../../../images/faq/faq-background@2x.webp) 2x);
+  background-image: image-set(url(../../../images/faq/faq-background.webp) 1x, url(../../../images/faq/faq-background@2x.webp) 2x);
   background-repeat: no-repeat;
   background-position: top -54px right;
   background-size: 100%;
@@ -3293,7 +3293,7 @@ address {
   background: #34373f;
 }
 .faq-accordion__question .ui-icon.ui-icon-triangle-1-s::before {
-  background: url(/images/icons/arrow.svg) no-repeat center/cover;
+  background: url(../../../images/icons/arrow.svg) no-repeat center/cover;
 }
 .faq-accordion__question .ui-icon::before {
   content: "";
@@ -3302,7 +3302,7 @@ address {
   left: 11px;
   width: 20px;
   height: 13px;
-  background: url(/images/icons/arrow-accent.svg) no-repeat center/cover;
+  background: url(../../../images/icons/arrow-accent.svg) no-repeat center/cover;
 }
 .faq-accordion__question-button {
   color: inherit;
