@@ -13,6 +13,9 @@ address {
   position: relative;
   z-index: -1;
 }
+.iron-image {
+  fill: $color-accent;
+}
 .center {
   max-width: 2020px;
   width: 100%;

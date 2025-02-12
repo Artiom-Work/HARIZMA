@@ -114,13 +114,14 @@
       height: 970px;
     }
     @media (max-width: 650px) {
-      height: 690px;
+      height: 620px;
     }
-    @media (max-width: 500px) {
-      height: 677px;
+
+    @media (max-width: 540px) {
+      height: 640px;
     }
     @media (max-width: 450px) {
-      height: 722px;
+      height: 762px;
     }
   }
   &__list-item {
@@ -146,10 +147,13 @@
       width: calc(100% / 3 - 11px);
     }
     @media (max-width: 768px) {
-      width: calc(100% / 2 - 11px);
+      width: calc(100vw / 2 - 11px - 18px - 17px);
       &:nth-child(even) {
         order: 1;
       }
+    }
+    @media (max-width: 768px) {
+      width: calc(100% / 2 - 11px);
     }
     @media (max-width: 650px) {
       padding: 18px 17px 15px 18px;

@@ -181,6 +181,8 @@
       top: 80%;
       opacity: 0;
       color: $color-accent-light;
+      caret-color: transparent;
+      cursor: default;
     }
   }
 }

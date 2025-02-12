@@ -500,6 +500,10 @@ address {
   z-index: -1;
 }
 
+.iron-image {
+  fill: #f69020;
+}
+
 .center {
   max-width: 2020px;
   width: 100%;
@@ -1783,7 +1787,6 @@ address {
 .possibilities__image {
   width: inherit;
   height: inherit;
-  fill: #f69020;
 }
 .possibilities__image-wrapper {
   position: relative;
@@ -2437,17 +2440,17 @@ address {
 }
 @media (max-width: 650px) {
   .advantages__list {
-    height: 690px;
+    height: 620px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 540px) {
   .advantages__list {
-    height: 677px;
+    height: 640px;
   }
 }
 @media (max-width: 450px) {
   .advantages__list {
-    height: 722px;
+    height: 762px;
   }
 }
 .advantages__list-item {
@@ -2482,12 +2485,17 @@ address {
 }
 @media (max-width: 768px) {
   .advantages__list-item {
-    width: calc(50% - 11px);
+    width: calc(50vw - 11px - 18px - 17px);
   }
   .advantages__list-item:nth-child(even) {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+  }
+}
+@media (max-width: 768px) {
+  .advantages__list-item {
+    width: calc(50% - 11px);
   }
 }
 @media (max-width: 650px) {
@@ -3223,6 +3231,8 @@ address {
   top: 80%;
   opacity: 0;
   color: #ffc619;
+  caret-color: transparent;
+  cursor: default;
 }
 
 .faq-accordion {
