@@ -24,7 +24,7 @@ $\color{limegreen}\text{Тренировочная работа}$
 
 Вёрстка -> [**Git pages**](https://artiom-work.github.io/HARIZMA/)
 
-<img src="images/website/preview-readme-image 1.png" width="400" alt="Изображение макета страницы">
+<img src="images/website/preview-readme-image.png" width="400" alt="Изображение макета страницы">
 
 ---
 
