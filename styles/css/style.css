@@ -1939,6 +1939,10 @@ address {
   overflow: hidden;
   -webkit-box-shadow: 0px 19px 25px -19px #000;
           box-shadow: 0px 19px 25px -19px #000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (max-width: 1280px) {
   .preview__slider {
@@ -2843,6 +2847,10 @@ address {
 .steps-reservation__slider {
   min-height: 593px;
   margin: 0px 0 0 -128px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (max-width: 768px) {
   .steps-reservation__slider {
@@ -2996,6 +3004,8 @@ address {
   font-size: 15px;
   line-height: 133%;
   letter-spacing: 0.03em;
+  cursor: text;
+  position: relative;
 }
 @media (max-width: 768px) {
   .reservation-step__description-text {

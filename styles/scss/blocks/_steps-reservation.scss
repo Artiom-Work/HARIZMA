@@ -80,6 +80,10 @@
   &__slider {
     min-height: 593px;
     margin: 0px 0 0 -128px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     @media (max-width: 768px) {
       min-height: 475px;
       margin: 0 0 0 -103px;
@@ -206,6 +210,8 @@
     font-size: 15px;
     line-height: 133%;
     letter-spacing: 0.03em;
+    cursor: text;
+    position: relative;
     @media (max-width: 768px) {
       letter-spacing: 0;
       width: 160px;
